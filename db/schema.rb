@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_08_11_064921) do
+ActiveRecord::Schema[8.0].define(version: 2025_08_11_082845) do
   create_table "bookings", force: :cascade do |t|
     t.string "user_id"
     t.string "sports_field_id"
@@ -53,7 +53,6 @@ ActiveRecord::Schema[8.0].define(version: 2025_08_11_064921) do
     t.string "name"
     t.string "email"
     t.string "phone_number"
-    t.string "password_digest"
     t.string "role"
     t.boolean "status"
     t.datetime "created_at", null: false

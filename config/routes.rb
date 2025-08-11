@@ -5,8 +5,7 @@ Rails.application.routes.draw do
   resources :sports_fields
   resources :users
 
-  get "/login", to: "authenticate#login"
-  # get "/register", to: "authenticate#register"
+  post "/login", to: "authenticate#login"
 
   get "up" => "rails/health#show", as: :rails_health_check
   root to: "home#login"

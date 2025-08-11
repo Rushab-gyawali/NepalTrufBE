@@ -1,1 +1,1 @@
-require "jwt_web_token"
+require 'json_web_token'

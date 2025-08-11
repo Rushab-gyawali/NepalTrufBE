@@ -1,13 +1,12 @@
 class AuthenticateController < ApplicationController
-
-  #get 'login'
+  before_action :authenticate_user!, only: [ :register]
+  #post 'login'
   def login
-    @user = User.find_by(email: auth_params[:email])
-    
-    if @user && @user.authenticate(auth_params[:password])
-      render json: { message: 'Login successful', user: @user }, status: :ok
+    user = User.find_for_database_authentication(email: auth_params[:email])
+    if user&.valid_password?(auth_params[:password])
+      render json: payload(user)
     else
-      render json: { error: 'Invalid email or password' }, status: :unauthorized
+      render json: { errors: ['Invalid Username/Password'] }, status: :unauthorized
     end
   end
 
@@ -16,7 +15,14 @@ class AuthenticateController < ApplicationController
 
   private
   def auth_params
-    params.expect(user: [ :email, :password ])
+    params.require(:user).permit(:email, :password)
   end
 
+  def payload(user)
+    return nil unless user and user.id
+    {
+      auth_token: JsonWebToken.encode({user_id: user.id}),
+      user: {id: user.id, email: user.email}
+    }
+  end
 end
