@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: MyString
+  sports_field_id: MyString
+  start_time: 2025-08-06 23:30:27
+  end_time: 2025-08-06 23:30:27
+  status: MyString
+  total_price: 9.99
+  payment_status: MyString
+
+two:
+  user_id: MyString
+  sports_field_id: MyString
+  start_time: 2025-08-06 23:30:27
+  end_time: 2025-08-06 23:30:27
+  status: MyString
+  total_price: 9.99
+  payment_status: MyString

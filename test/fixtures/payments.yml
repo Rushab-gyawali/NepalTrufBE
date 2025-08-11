@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  booking_id: MyString
+  amount: MyString
+  decimal: MyString
+  method: MyString
+  transaction_id: MyString
+  datetime: MyString
+  status: MyString
+  paid_at: MyString
+
+two:
+  booking_id: MyString
+  amount: MyString
+  decimal: MyString
+  method: MyString
+  transaction_id: MyString
+  datetime: MyString
+  status: MyString
+  paid_at: MyString
