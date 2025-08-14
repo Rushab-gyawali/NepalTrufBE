@@ -1,10 +1,10 @@
 class SportsFieldsController < ApplicationController
   before_action :set_sports_field, only: %i[ show update destroy ]
 
+
   # GET /sports_fields
   def index
-    @sports_fields = SportsField.all
-
+    @sports_fields = SportsField.where(is_active: true)
     render json: @sports_fields
   end
 

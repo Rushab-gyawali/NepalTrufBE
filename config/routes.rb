@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users,
+      controllers:{
+        sessions:'users/sessions'
+      }
   resources :payments
   resources :bookings
   resources :sports_fields
-  resources :users
 
   post "/login", to: "authenticate#login"
 

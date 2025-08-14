@@ -1,0 +1,46 @@
+# Ignore bundler config
+/.bundle
+
+# Ignore log files and temp files
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+# Ignore Rails specific temp and cache files
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+.byebug_history
+
+# Ignore uploaded files in development
+/storage/*
+!/storage/.keep
+
+# Ignore master key for credentials (DO NOT commit this!)
+/config/master.key
+/config/credentials.yml.key
+/config/credentials.yml.enc   # optional, can ignore if you want to store it outside git
+
+# Ignore dotenv environment variables file
+/.env
+/.env.*.local
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore coverage reports
+/coverage/
+
+# Ignore IDE/editor configs
+/.vscode/
+/.idea/
+/*.swp
+*.sublime-workspace
+*.sublime-project
+
+# Ignore node modules and yarn logs
+/node_modules
+/yarn-error.log
