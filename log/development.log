@@ -4932,3 +4932,556 @@ Processing by SportsFieldsController#index as HTML
 Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
 
 
+Started GET "/sports_fields" for ::1 at 2025-08-14 12:44:47 +0545
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+Processing by SportsFieldsController#index as HTML
+  [1m[36mSportsField Load (0.2ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in `index'
+Completed 200 OK in 18ms (Views: 10.7ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 6.6ms)
+
+
+Started GET "/sports_fields" for ::1 at 2025-08-14 12:44:47 +0545
+Processing by SportsFieldsController#index as HTML
+  [1m[36mSportsField Load (0.1ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in `index'
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/sports_fields" for ::1 at 2025-08-14 12:44:47 +0545
+Processing by SportsFieldsController#index as HTML
+  [1m[36mSportsField Load (0.1ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/sports_fields" for ::1 at 2025-08-14 12:44:47 +0545
+Processing by SportsFieldsController#index as HTML
+  [1m[36mSportsField Load (0.1ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/sports_fields" for ::1 at 2025-08-14 12:56:02 +0545
+Processing by SportsFieldsController#index as HTML
+  [1m[36mSportsField Load (1.1ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 0.8ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/sports_fields" for ::1 at 2025-08-14 12:56:02 +0545
+Processing by SportsFieldsController#index as HTML
+  [1m[36mSportsField Load (0.1ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in `index'
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2025-08-14 14:18:42 +0545
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+Processing by AuthenticateController#login as HTML
+  Parameters: {"user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "authenticate"=>{"user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'gyawali@gmail.com' ORDER BY "users"."id" ASC LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/authenticate_controller.rb:6:in `login'
+Completed 200 OK in 202ms (Views: 0.1ms | ActiveRecord: 1.7ms (1 query, 0 cached) | GC: 3.7ms)
+
+
+Started GET "/sports_fields" for ::1 at 2025-08-14 14:18:49 +0545
+Processing by SportsFieldsController#index as HTML
+  [1m[36mSportsField Load (0.0ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in `index'
+Completed 200 OK in 9ms (Views: 5.6ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.8ms)
+
+
+Started GET "/sports_fields" for ::1 at 2025-08-14 14:18:49 +0545
+Processing by SportsFieldsController#index as HTML
+  [1m[36mSportsField Load (0.1ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in `index'
+Completed 200 OK in 1ms (Views: 1.0ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/sports_fields" for ::1 at 2025-08-14 14:18:50 +0545
+Processing by SportsFieldsController#index as HTML
+  [1m[36mSportsField Load (0.2ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in `index'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/sports_fields" for ::1 at 2025-08-14 14:18:50 +0545
+Processing by SportsFieldsController#index as HTML
+  [1m[36mSportsField Load (0.1ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in `index'
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/" for ::1 at 2025-08-14 15:04:01 +0545
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+  
+ActionController::RoutingError (uninitialized constant HomeController)
+Caused by: ActionDispatch::MissingController (uninitialized constant HomeController)
+Caused by: NameError (uninitialized constant HomeController)
+
+Information for: ActionController::RoutingError (uninitialized constant HomeController):
+  
+
+Information for cause: ActionDispatch::MissingController (uninitialized constant HomeController):
+  
+actionpack (8.0.2) lib/action_dispatch/http/request.rb:102:in `rescue in controller_class_for'
+actionpack (8.0.2) lib/action_dispatch/http/request.rb:98:in `controller_class_for'
+actionpack (8.0.2) lib/action_dispatch/http/request.rb:91:in `controller_class'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:61:in `controller'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:48:in `serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:908:in `call'
+railties (8.0.2) lib/rails/engine/lazy_route_set.rb:68:in `call'
+warden-jwt_auth (0.11.0) lib/warden/jwt_auth/middleware/token_dispatcher.rb:20:in `call'
+warden-jwt_auth (0.11.0) lib/warden/jwt_auth/middleware/revocation_manager.rb:21:in `call'
+rack (3.2.0) lib/rack/builder.rb:283:in `call'
+warden-jwt_auth (0.11.0) lib/warden/jwt_auth/middleware.rb:22:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.2.0) lib/rack/etag.rb:29:in `call'
+rack (3.2.0) lib/rack/conditional_get.rb:31:in `call'
+rack (3.2.0) lib/rack/head.rb:15:in `call'
+activerecord (8.0.2) lib/active_record/migration.rb:671:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.2) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.2) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.2.0) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.2.0) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+rack-cors (3.0.0) lib/rack/cors.rb:102:in `call'
+railties (8.0.2) lib/rails/engine.rb:535:in `call'
+puma (6.6.1) lib/puma/configuration.rb:279:in `call'
+puma (6.6.1) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.1) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.1) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.1) lib/puma/server.rb:472:in `process_client'
+puma (6.6.1) lib/puma/server.rb:254:in `block in run'
+puma (6.6.1) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+
+Information for cause: NameError (uninitialized constant HomeController):
+  
+activesupport (8.0.2) lib/active_support/inflector/methods.rb:290:in `constantize'
+activesupport (8.0.2) lib/active_support/core_ext/string/inflections.rb:74:in `constantize'
+actionpack (8.0.2) lib/action_dispatch/http/request.rb:99:in `controller_class_for'
+actionpack (8.0.2) lib/action_dispatch/http/request.rb:91:in `controller_class'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:61:in `controller'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:48:in `serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:908:in `call'
+railties (8.0.2) lib/rails/engine/lazy_route_set.rb:68:in `call'
+warden-jwt_auth (0.11.0) lib/warden/jwt_auth/middleware/token_dispatcher.rb:20:in `call'
+warden-jwt_auth (0.11.0) lib/warden/jwt_auth/middleware/revocation_manager.rb:21:in `call'
+rack (3.2.0) lib/rack/builder.rb:283:in `call'
+warden-jwt_auth (0.11.0) lib/warden/jwt_auth/middleware.rb:22:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.2.0) lib/rack/etag.rb:29:in `call'
+rack (3.2.0) lib/rack/conditional_get.rb:31:in `call'
+rack (3.2.0) lib/rack/head.rb:15:in `call'
+activerecord (8.0.2) lib/active_record/migration.rb:671:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.2) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.2) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.2.0) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.2.0) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+rack-cors (3.0.0) lib/rack/cors.rb:102:in `call'
+railties (8.0.2) lib/rails/engine.rb:535:in `call'
+puma (6.6.1) lib/puma/configuration.rb:279:in `call'
+puma (6.6.1) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.1) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.1) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.1) lib/puma/server.rb:472:in `process_client'
+puma (6.6.1) lib/puma/server.rb:254:in `block in run'
+puma (6.6.1) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+Started GET "/favicon.ico" for ::1 at 2025-08-14 15:04:01 +0545
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "bookings" /*application='NepalTruf'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "bookings" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" varchar, "sports_field_id" varchar, "start_time" datetime(6), "end_time" datetime(6), "status" varchar, "total_price" decimal, "payment_status" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='NepalTruf'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "payments" /*application='NepalTruf'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "payments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "booking_id" varchar, "amount" varchar, "payment_method" varchar, "transaction_id" varchar, "status" varchar, "paid_at" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='NepalTruf'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "sports_fields" /*application='NepalTruf'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "sports_fields" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "owner_id" varchar, "field_type" varchar, "address" varchar, "latitude" decimal, "longitude" decimal, "hourly_rate" decimal, "description" varchar, "image_url" varchar, "is_active" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='NepalTruf'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" /*application='NepalTruf'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "phone_number" varchar, "role" varchar, "status" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime(6), "remember_created_at" datetime(6)) /*application='NepalTruf'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token") /*application='NepalTruf'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY) /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20250811082845) /*application='NepalTruf'*/[0m
+  [1m[35m (1.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20250811082137),
+(20250811064921),
+(20250807110001),
+(20250806174527),
+(20250806163704),
+(20250806160747); /*application='NepalTruf'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2025-08-14 11:11:11.070479', '2025-08-14 11:11:11.070481') RETURNING "key" /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.1ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = 'test', "updated_at" = '2025-08-14 11:11:11.071951' WHERE "ar_internal_metadata"."key" = 'environment' /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'schema_sha1' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('schema_sha1', 'b47510578821327d46f05be721f0ffd4a7781dbc', '2025-08-14 11:11:11.074107', '2025-08-14 11:11:11.074109') RETURNING "key" /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+Started GET "/" for 151.101.1.227 at 2025-08-14 11:11:17 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+  
+ActionController::RoutingError (uninitialized constant HomeController)
+Caused by: ActionDispatch::MissingController (uninitialized constant HomeController)
+Caused by: NameError (uninitialized constant HomeController)
+
+Information for: ActionController::RoutingError (uninitialized constant HomeController):
+  
+
+Information for cause: ActionDispatch::MissingController (uninitialized constant HomeController):
+  
+actionpack (8.0.2) lib/action_dispatch/http/request.rb:102:in `rescue in controller_class_for'
+actionpack (8.0.2) lib/action_dispatch/http/request.rb:98:in `controller_class_for'
+actionpack (8.0.2) lib/action_dispatch/http/request.rb:91:in `controller_class'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:61:in `controller'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:48:in `serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:908:in `call'
+railties (8.0.2) lib/rails/engine/lazy_route_set.rb:68:in `call'
+warden-jwt_auth (0.11.0) lib/warden/jwt_auth/middleware/token_dispatcher.rb:20:in `call'
+warden-jwt_auth (0.11.0) lib/warden/jwt_auth/middleware/revocation_manager.rb:21:in `call'
+rack (3.2.0) lib/rack/builder.rb:283:in `call'
+warden-jwt_auth (0.11.0) lib/warden/jwt_auth/middleware.rb:22:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.2.0) lib/rack/etag.rb:29:in `call'
+rack (3.2.0) lib/rack/conditional_get.rb:31:in `call'
+rack (3.2.0) lib/rack/head.rb:15:in `call'
+activerecord (8.0.2) lib/active_record/migration.rb:671:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.2) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.2) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.2.0) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.2.0) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+rack-cors (3.0.0) lib/rack/cors.rb:102:in `call'
+railties (8.0.2) lib/rails/engine.rb:535:in `call'
+puma (6.6.1) lib/puma/configuration.rb:279:in `call'
+puma (6.6.1) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.1) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.1) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.1) lib/puma/server.rb:472:in `process_client'
+puma (6.6.1) lib/puma/server.rb:254:in `block in run'
+puma (6.6.1) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+
+Information for cause: NameError (uninitialized constant HomeController):
+  
+activesupport (8.0.2) lib/active_support/inflector/methods.rb:290:in `constantize'
+activesupport (8.0.2) lib/active_support/core_ext/string/inflections.rb:74:in `constantize'
+actionpack (8.0.2) lib/action_dispatch/http/request.rb:99:in `controller_class_for'
+actionpack (8.0.2) lib/action_dispatch/http/request.rb:91:in `controller_class'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:61:in `controller'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:48:in `serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:908:in `call'
+railties (8.0.2) lib/rails/engine/lazy_route_set.rb:68:in `call'
+warden-jwt_auth (0.11.0) lib/warden/jwt_auth/middleware/token_dispatcher.rb:20:in `call'
+warden-jwt_auth (0.11.0) lib/warden/jwt_auth/middleware/revocation_manager.rb:21:in `call'
+rack (3.2.0) lib/rack/builder.rb:283:in `call'
+warden-jwt_auth (0.11.0) lib/warden/jwt_auth/middleware.rb:22:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.2.0) lib/rack/etag.rb:29:in `call'
+rack (3.2.0) lib/rack/conditional_get.rb:31:in `call'
+rack (3.2.0) lib/rack/head.rb:15:in `call'
+activerecord (8.0.2) lib/active_record/migration.rb:671:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.2) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.2) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.2.0) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.2.0) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+rack-cors (3.0.0) lib/rack/cors.rb:102:in `call'
+railties (8.0.2) lib/rails/engine.rb:535:in `call'
+puma (6.6.1) lib/puma/configuration.rb:279:in `call'
+puma (6.6.1) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.1) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.1) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.1) lib/puma/server.rb:472:in `process_client'
+puma (6.6.1) lib/puma/server.rb:254:in `block in run'
+puma (6.6.1) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+Started GET "/favicon.ico" for 151.101.1.227 at 2025-08-14 11:11:18 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started POST "/login" for 151.101.1.227 at 2025-08-14 11:11:24 +0000
+Processing by AuthenticateController#login as */*
+  Parameters: {"user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "authenticate"=>{"user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'gyawali@gmail.com' ORDER BY "users"."id" ASC LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/authenticate_controller.rb:6:in `login'
+Completed 200 OK in 235ms (Views: 0.2ms | ActiveRecord: 3.2ms (1 query, 0 cached) | GC: 5.5ms)
+
+
+Started GET "/sports_fields" for 151.101.1.227 at 2025-08-14 11:11:39 +0000
+Processing by SportsFieldsController#index as HTML
+  [1m[36mSportsField Load (0.2ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in `index'
+Completed 200 OK in 37ms (Views: 18.6ms | ActiveRecord: 3.7ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started GET "/sports_fields" for 151.101.1.227 at 2025-08-14 11:11:40 +0000
+Processing by SportsFieldsController#index as HTML
+  [1m[36mSportsField Load (0.4ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in `index'
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for 151.101.1.227 at 2025-08-14 11:11:43 +0000
+Processing by AuthenticateController#login as HTML
+  Parameters: {"user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "authenticate"=>{"user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'gyawali@gmail.com' ORDER BY "users"."id" ASC LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/authenticate_controller.rb:6:in `login'
+Completed 200 OK in 205ms (Views: 0.1ms | ActiveRecord: 0.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+Started GET "/" for 151.101.1.227 at 2025-08-14 11:22:15 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+  
+ActionController::RoutingError (uninitialized constant HomeController)
+Caused by: ActionDispatch::MissingController (uninitialized constant HomeController)
+Caused by: NameError (uninitialized constant HomeController)
+
+Information for: ActionController::RoutingError (uninitialized constant HomeController):
+  
+
+Information for cause: ActionDispatch::MissingController (uninitialized constant HomeController):
+  
+actionpack (8.0.2) lib/action_dispatch/http/request.rb:102:in `rescue in controller_class_for'
+actionpack (8.0.2) lib/action_dispatch/http/request.rb:98:in `controller_class_for'
+actionpack (8.0.2) lib/action_dispatch/http/request.rb:91:in `controller_class'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:61:in `controller'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:48:in `serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:908:in `call'
+railties (8.0.2) lib/rails/engine/lazy_route_set.rb:68:in `call'
+warden-jwt_auth (0.11.0) lib/warden/jwt_auth/middleware/token_dispatcher.rb:20:in `call'
+warden-jwt_auth (0.11.0) lib/warden/jwt_auth/middleware/revocation_manager.rb:21:in `call'
+rack (3.2.0) lib/rack/builder.rb:283:in `call'
+warden-jwt_auth (0.11.0) lib/warden/jwt_auth/middleware.rb:22:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.2.0) lib/rack/etag.rb:29:in `call'
+rack (3.2.0) lib/rack/conditional_get.rb:31:in `call'
+rack (3.2.0) lib/rack/head.rb:15:in `call'
+activerecord (8.0.2) lib/active_record/migration.rb:671:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.2) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.2) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.2.0) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.2.0) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+rack-cors (3.0.0) lib/rack/cors.rb:102:in `call'
+railties (8.0.2) lib/rails/engine.rb:535:in `call'
+puma (6.6.1) lib/puma/configuration.rb:279:in `call'
+puma (6.6.1) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.1) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.1) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.1) lib/puma/server.rb:472:in `process_client'
+puma (6.6.1) lib/puma/server.rb:254:in `block in run'
+puma (6.6.1) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+
+Information for cause: NameError (uninitialized constant HomeController):
+  
+activesupport (8.0.2) lib/active_support/inflector/methods.rb:290:in `constantize'
+activesupport (8.0.2) lib/active_support/core_ext/string/inflections.rb:74:in `constantize'
+actionpack (8.0.2) lib/action_dispatch/http/request.rb:99:in `controller_class_for'
+actionpack (8.0.2) lib/action_dispatch/http/request.rb:91:in `controller_class'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:61:in `controller'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:48:in `serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:53:in `block in serve'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:133:in `block in find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in `each'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:126:in `find_routes'
+actionpack (8.0.2) lib/action_dispatch/journey/router.rb:34:in `serve'
+actionpack (8.0.2) lib/action_dispatch/routing/route_set.rb:908:in `call'
+railties (8.0.2) lib/rails/engine/lazy_route_set.rb:68:in `call'
+warden-jwt_auth (0.11.0) lib/warden/jwt_auth/middleware/token_dispatcher.rb:20:in `call'
+warden-jwt_auth (0.11.0) lib/warden/jwt_auth/middleware/revocation_manager.rb:21:in `call'
+rack (3.2.0) lib/rack/builder.rb:283:in `call'
+warden-jwt_auth (0.11.0) lib/warden/jwt_auth/middleware.rb:22:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (3.2.0) lib/rack/etag.rb:29:in `call'
+rack (3.2.0) lib/rack/conditional_get.rb:31:in `call'
+rack (3.2.0) lib/rack/head.rb:15:in `call'
+activerecord (8.0.2) lib/active_record/migration.rb:671:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:31:in `block in call'
+activesupport (8.0.2) lib/active_support/callbacks.rb:100:in `run_callbacks'
+actionpack (8.0.2) lib/action_dispatch/middleware/callbacks.rb:30:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:31:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/show_exceptions.rb:32:in `call'
+railties (8.0.2) lib/rails/rack/logger.rb:41:in `call_app'
+railties (8.0.2) lib/rails/rack/logger.rb:29:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/remote_ip.rb:96:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/request_id.rb:34:in `call'
+rack (3.2.0) lib/rack/runtime.rb:24:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (8.0.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/executor.rb:16:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/static.rb:27:in `call'
+rack (3.2.0) lib/rack/sendfile.rb:114:in `call'
+actionpack (8.0.2) lib/action_dispatch/middleware/host_authorization.rb:143:in `call'
+rack-cors (3.0.0) lib/rack/cors.rb:102:in `call'
+railties (8.0.2) lib/rails/engine.rb:535:in `call'
+puma (6.6.1) lib/puma/configuration.rb:279:in `call'
+puma (6.6.1) lib/puma/request.rb:99:in `block in handle_request'
+puma (6.6.1) lib/puma/thread_pool.rb:390:in `with_force_shutdown'
+puma (6.6.1) lib/puma/request.rb:98:in `handle_request'
+puma (6.6.1) lib/puma/server.rb:472:in `process_client'
+puma (6.6.1) lib/puma/server.rb:254:in `block in run'
+puma (6.6.1) lib/puma/thread_pool.rb:167:in `block in spawn_thread'
+Started POST "/login" for 151.101.1.227 at 2025-08-14 11:22:20 +0000
+Processing by AuthenticateController#login as */*
+  Parameters: {"user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "authenticate"=>{"user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'gyawali@gmail.com' ORDER BY "users"."id" ASC LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/authenticate_controller.rb:6:in `login'
+Completed 200 OK in 261ms (Views: 0.2ms | ActiveRecord: 3.4ms (1 query, 0 cached) | GC: 0.4ms)
+
+
+Started POST "/login" for 151.101.1.227 at 2025-08-14 11:22:23 +0000
+Processing by AuthenticateController#login as */*
+  Parameters: {"user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "authenticate"=>{"user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'gyawali@gmail.com' ORDER BY "users"."id" ASC LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/authenticate_controller.rb:6:in `login'
+Completed 200 OK in 213ms (Views: 0.1ms | ActiveRecord: 2.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for 151.101.1.227 at 2025-08-14 11:22:26 +0000
+Processing by AuthenticateController#login as */*
+  Parameters: {"user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "authenticate"=>{"user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'gyawali@gmail.com' ORDER BY "users"."id" ASC LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/authenticate_controller.rb:6:in `login'
+Completed 401 Unauthorized in 224ms (Views: 2.9ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 8.6ms)
+
+
+Started POST "/login" for 151.101.1.227 at 2025-08-14 11:22:30 +0000
+Processing by AuthenticateController#login as */*
+  Parameters: {"user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "authenticate"=>{"user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'gyawali@gmail.com' ORDER BY "users"."id" ASC LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/authenticate_controller.rb:6:in `login'
+Completed 200 OK in 204ms (Views: 0.1ms | ActiveRecord: 0.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+Started POST "/login" for 151.101.1.227 at 2025-08-14 11:24:38 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+Processing by AuthenticateController#login as */*
+  Parameters: {"user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "authenticate"=>{"user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'gyawali@gmail.com' ORDER BY "users"."id" ASC LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/authenticate_controller.rb:6:in `login'
+Completed 200 OK in 234ms (Views: 0.2ms | ActiveRecord: 2.7ms (1 query, 0 cached) | GC: 3.4ms)
+
+
+Started POST "/login" for 151.101.1.227 at 2025-08-14 11:24:41 +0000
+Processing by AuthenticateController#login as */*
+  Parameters: {"user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}, "authenticate"=>{"user"=>{"email"=>"[FILTERED]", "password"=>"[FILTERED]"}}}
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'gyawali@gmail.com' ORDER BY "users"."id" ASC LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/authenticate_controller.rb:6:in `login'
+Completed 200 OK in 212ms (Views: 0.1ms | ActiveRecord: 3.0ms (1 query, 0 cached) | GC: 2.7ms)
+
+
