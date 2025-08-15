@@ -4,9 +4,20 @@ class BookingsController < ApplicationController
 
   # GET /bookings
   def index
-    @bookings = Booking.all
+    @bookings = Booking.includes(:user, :sports_field).all
 
-    render json: @bookings
+    render json: @bookings.map { |booking|
+    {
+      id: booking.id,
+      start_time: booking.start_time,
+      end_time: booking.end_time,
+      status: booking.status,
+      total_price: booking.total_price,
+      payment_status: booking.payment_status,
+      user_name: booking.user.name,
+      sports_field_name: booking.sports_field.name
+    }
+  }
   end
 
   # GET /bookings/1
