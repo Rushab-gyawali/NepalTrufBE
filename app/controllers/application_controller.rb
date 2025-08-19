@@ -1,26 +1,33 @@
-class ApplicationController < ActionController::Base
-# before_action  :authenticate_user!
-attr_reader :jwt_payload
+class ApplicationController < ActionController::API
+  before_action :authenticate_user!
+  attr_reader :current_user, :jwt_payload
 
-  def current_user
-    return @current_user if defined?(@current_user)
+  private
+
+  def authenticate_user!
+    Rails.logger.info("Authorization header: #{request.headers['Authorization'].inspect}")
 
     auth_header = request.headers['Authorization']
     token = auth_header&.split(' ')&.last
-    return @current_user = nil unless token
-    decoded = JsonWebToken.decode(token)
-    return @current_user = nil unless decoded && decoded[:user_id]
+    Rails.logger.info("Extracted token: #{token.inspect}")
 
-    @current_user = User.find_by(id: decoded[:user_id])
-  rescue JWT::DecodeError, JWT::ExpiredSignature
-    @current_user = nil
-  end 
+    return head(:unauthorized) unless token
 
-  def authenticate_user!
-    head :unauthorized unless current_user
-  end
+    begin
+      decoded = JsonWebToken.decode(token)
+      Rails.logger.info("Decoded JWT payload: #{decoded.inspect}")
 
-  def authorize_role!(*roles)
-    head :forbidden unless current_user && roles.map(&:to_s).include?(current_user.role)
+      return head(:unauthorized) unless decoded && decoded[:user_id]
+
+      @jwt_payload = decoded
+      @current_user = User.find_by(id: decoded[:user_id])
+      Rails.logger.info("Current user found: #{@current_user.inspect}")
+
+      return head(:unauthorized) unless @current_user
+
+    rescue JWT::DecodeError, JWT::ExpiredSignature => e
+      Rails.logger.warn("JWT Error: #{e.message}")
+      return head(:unauthorized)
+    end
   end
 end

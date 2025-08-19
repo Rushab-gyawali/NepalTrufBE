@@ -14,8 +14,8 @@ class BookingsController < ApplicationController
       status: booking.status,
       total_price: booking.total_price,
       payment_status: booking.payment_status,
-      user_name: booking.user.name,
-      sports_field_name: booking.sports_field.name
+      user_name: booking.user&.name,
+      sports_field_name: booking.sports_field&.name
     }
   }
   end

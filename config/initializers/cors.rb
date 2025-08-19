@@ -10,8 +10,9 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
     origins "http://localhost:3005"
 
     resource "*",
-      headers: :any,
-      expose: ['x-api-key'],
+      headers: ['Authorization', 'Content-Type', 'Accept'],
+      expose: ['Authorization'],
       methods: [:get, :post, :put, :patch, :delete, :options, :head]
   end
 end
+

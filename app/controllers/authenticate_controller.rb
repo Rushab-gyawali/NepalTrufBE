@@ -1,16 +1,20 @@
 class AuthenticateController < ApplicationController
-  before_action :authenticate_user!, only: [:register]
+  # ❌ Do not require authentication for login/register
+  skip_before_action :authenticate_user!, only: [:login, :register]
 
   # POST /login
   def login
-    user = User.find_for_database_authentication(email: auth_params[:email])
+    user = User.find_by(email: auth_params[:email])
     if user&.valid_password?(auth_params[:password])
-      token = Warden::JWTAuth::UserEncoder.new.call(user, :user, nil).first
-      response.set_header('x-api-key', token)
+      token = JsonWebToken.encode(user_id: user.id)
 
-      render json: { user: { id: user.id, email: user.email, role: user.role } }, status: :ok
+      response.set_header('Authorization', "Bearer #{token}")
+      render json: {
+        token: token,
+        user: { id: user.id, email: user.email, role: user.role }
+      }, status: :ok
     else
-      render json: { errors: ['Invalid Email/Password'] }, status: :unauthorized
+      render json: { errors: ['Invalid email or password'] }, status: :unauthorized
     end
   end
 

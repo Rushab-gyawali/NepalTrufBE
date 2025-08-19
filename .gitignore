@@ -44,3 +44,5 @@ Thumbs.db
 # Ignore node modules and yarn logs
 /node_modules
 /yarn-error.log
+
+/config/master.key
