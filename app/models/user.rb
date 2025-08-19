@@ -18,5 +18,13 @@ class User < ApplicationRecord
   def is_user?
     role == 'user'
   end
+
+  def is_test?
+    role == "testt"
+  end
+
+  def can_view_booking?
+    is_admin?
+  end
   
 end
