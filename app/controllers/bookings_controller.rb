@@ -1,11 +1,13 @@
 class BookingsController < ApplicationController
+  include Pundit::Authorization
   before_action :set_booking, only: %i[ show update destroy ]
-
+  before_action :authenticate_user!
 
   # GET /bookings
   def index
-    @bookings = Booking.includes(:user, :sports_field).all
-
+    @bookings = policy_scope(Booking.includes(:user, :sports_field))
+    authorize Booking
+    
     render json: @bookings.map { |booking|
     {
       id: booking.id,
@@ -51,9 +53,8 @@ class BookingsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_booking
-      @booking = Booking.find(params.expect(:id))
+     def set_booking
+      @booking = Booking.find(params[:id]) 
     end
 
     # Only allow a list of trusted parameters through.

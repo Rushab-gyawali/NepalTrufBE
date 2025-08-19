@@ -9,4 +9,14 @@ class User < ApplicationRecord
 
   has_many :sports_fields, dependent: :destroy
   has_many :bookings
+
+
+  def is_admin?
+    role == 'admin'
+  end
+
+  def is_user?
+    role == 'user'
+  end
+  
 end
