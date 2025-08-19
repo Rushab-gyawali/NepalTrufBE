@@ -10,7 +10,6 @@ class JsonWebToken
     body = JWT.decode(token, SECRET_KEY, true, algorithm: 'HS256')[0]
     HashWithIndifferentAccess.new(body)
     rescue JWT::DecodeError, JWT::ExpiredSignature => e
-    Rails.logger.warn("JWT decode error: #{e.message}")
     nil
   end
 end

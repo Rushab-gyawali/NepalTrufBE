@@ -1,6 +1,6 @@
 class SportsFieldsController < ApplicationController
   before_action :set_sports_field, only: %i[ show update destroy ]
-
+  skip_before_action :authenticate_user!, only: [:index]
 
   # GET /sports_fields
   def index

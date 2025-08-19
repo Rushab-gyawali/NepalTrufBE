@@ -1,5 +1,4 @@
 class AuthenticateController < ApplicationController
-  # ❌ Do not require authentication for login/register
   skip_before_action :authenticate_user!, only: [:login, :register]
 
   # POST /login
