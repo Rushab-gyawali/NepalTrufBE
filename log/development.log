@@ -6519,3 +6519,720 @@ Processing by AuthenticateController#login as */*
 Completed 200 OK in 206ms (Views: 0.6ms | ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 0.0ms)
 
 
+Started POST "/login" for ::1 at 2025-08-20 04:03:22 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (6.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+Processing by AuthenticateController#login as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "authenticate" => {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}}
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'john.doe@example.com' LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/authenticate_controller.rb:6:in 'AuthenticateController#login'
+Completed 200 OK in 669ms (Views: 0.5ms | ActiveRecord: 68.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-20 04:03:36 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "booking" => {}}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:20:in 'ApplicationController#authenticate_user!'
+  [1m[36mBooking Load (1.5ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = '6' /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:10:in 'Enumerable#map'
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:10:in 'Enumerable#map'
+  [1m[36mSportsField Load (1.2ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."id" = 3 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:10:in 'Enumerable#map'
+Completed 200 OK in 511ms (Views: 0.3ms | ActiveRecord: 25.0ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-20 04:03:41 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "booking" => {}}
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 8ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-20 04:03:46 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "booking" => {}}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:20:in 'ApplicationController#authenticate_user!'
+  [1m[36mBooking Load (1.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = '6' /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:10:in 'Enumerable#map'
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:10:in 'Enumerable#map'
+  [1m[36mSportsField Load (1.2ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."id" = 3 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:10:in 'Enumerable#map'
+Completed 200 OK in 47ms (Views: 0.3ms | ActiveRecord: 6.0ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/sports_fields" for ::1 at 2025-08-20 08:24:18 +0000
+Processing by SportsFieldsController#index as HTML
+  [1m[36mSportsField Load (125.1ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in 'SportsFieldsController#index'
+Completed 200 OK in 366ms (Views: 180.1ms | ActiveRecord: 124.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/sports_fields" for ::1 at 2025-08-20 08:24:19 +0000
+Processing by SportsFieldsController#index as HTML
+  [1m[36mSportsField Load (6.4ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in 'SportsFieldsController#index'
+Completed 200 OK in 30ms (Views: 27.6ms | ActiveRecord: 1.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/sports_fields" for ::1 at 2025-08-20 08:24:34 +0000
+Processing by SportsFieldsController#index as HTML
+  [1m[36mSportsField Load (1.4ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in 'SportsFieldsController#index'
+Completed 200 OK in 8ms (Views: 4.2ms | ActiveRecord: 1.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/sports_fields" for ::1 at 2025-08-20 08:24:35 +0000
+Processing by SportsFieldsController#index as HTML
+  [1m[36mSportsField Load (1.0ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in 'SportsFieldsController#index'
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 1.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2025-08-20 08:24:42 +0000
+Processing by AuthenticateController#login as HTML
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "authenticate" => {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'gyawali@gmail.com' LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/authenticate_controller.rb:6:in 'AuthenticateController#login'
+Completed 200 OK in 272ms (Views: 0.3ms | ActiveRecord: 2.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-20 08:24:51 +0000
+Processing by BookingsController#index as HTML
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-20 08:24:51 +0000
+Processing by BookingsController#index as HTML
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/sports_fields" for ::1 at 2025-08-20 08:24:53 +0000
+Processing by SportsFieldsController#index as HTML
+  [1m[36mSportsField Load (0.7ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in 'SportsFieldsController#index'
+Completed 200 OK in 10ms (Views: 7.1ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/sports_fields" for ::1 at 2025-08-20 08:24:53 +0000
+Processing by SportsFieldsController#index as HTML
+  [1m[36mSportsField Load (1.0ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in 'SportsFieldsController#index'
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 1.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-20 08:24:58 +0000
+Processing by BookingsController#index as HTML
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-20 08:24:58 +0000
+Processing by BookingsController#index as HTML
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/sports_fields" for ::1 at 2025-08-20 08:24:59 +0000
+Processing by SportsFieldsController#index as HTML
+  [1m[36mSportsField Load (0.9ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in 'SportsFieldsController#index'
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/sports_fields" for ::1 at 2025-08-20 08:24:59 +0000
+Processing by SportsFieldsController#index as HTML
+  [1m[36mSportsField Load (1.0ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in 'SportsFieldsController#index'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 1.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/sports_fields" for ::1 at 2025-08-20 08:25:03 +0000
+Processing by SportsFieldsController#index as HTML
+  [1m[36mSportsField Load (1.1ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in 'SportsFieldsController#index'
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 1.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/sports_fields" for ::1 at 2025-08-20 08:25:03 +0000
+Processing by SportsFieldsController#index as HTML
+  [1m[36mSportsField Load (0.5ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in 'SportsFieldsController#index'
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 27.1ms)
+
+
+Started GET "/sports_fields" for ::1 at 2025-08-20 08:25:04 +0000
+Processing by SportsFieldsController#index as HTML
+  [1m[36mSportsField Load (0.8ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in 'SportsFieldsController#index'
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/sports_fields" for ::1 at 2025-08-20 08:25:04 +0000
+Processing by SportsFieldsController#index as HTML
+  [1m[36mSportsField Load (0.9ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in 'SportsFieldsController#index'
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2025-08-20 09:06:29 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (5.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+Processing by AuthenticateController#login as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "authenticate" => {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.7ms)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/application_controller.rb:38:in 'String#+'
+app/controllers/application_controller.rb:38:in 'ApplicationController#set_tenant'
+Started POST "/login" for ::1 at 2025-08-20 09:07:13 +0000
+Processing by AuthenticateController#login as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "authenticate" => {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}}
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'john.doe@example.com' LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/authenticate_controller.rb:6:in 'AuthenticateController#login'
+Completed 200 OK in 662ms (Views: 0.3ms | ActiveRecord: 64.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-20 09:07:33 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "booking" => {}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 7.3ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/application_controller.rb:24:in 'String#+'
+app/controllers/application_controller.rb:24:in 'ApplicationController#authenticate_user!'
+Started GET "/bookings" for ::1 at 2025-08-20 09:07:58 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "booking" => {}}
+nil
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:25:in 'ApplicationController#authenticate_user!'
+  [1m[36mBooking Load (1.4ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = '6' /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:10:in 'Enumerable#map'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:10:in 'Enumerable#map'
+  [1m[36mSportsField Load (2.1ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."id" = 3 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:10:in 'Enumerable#map'
+Completed 200 OK in 486ms (Views: 11.0ms | ActiveRecord: 63.2ms (4 queries, 0 cached) | GC: 18.4ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-20 09:08:11 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "booking" => {}}
+nil
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:25:in 'ApplicationController#authenticate_user!'
+  [1m[36mBooking Load (1.4ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = '6' /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:10:in 'Enumerable#map'
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:10:in 'Enumerable#map'
+  [1m[36mSportsField Load (1.2ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."id" = 3 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:10:in 'Enumerable#map'
+Completed 200 OK in 51ms (Views: 0.5ms | ActiveRecord: 5.8ms (4 queries, 0 cached) | GC: 1.2ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-20 09:08:39 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "booking" => {}}
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 37.1ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NameError (undefined local variable or method 'rails' for an instance of BookingsController):
+  
+app/controllers/application_controller.rb:24:in 'ApplicationController#authenticate_user!'
+Started GET "/bookings" for ::1 at 2025-08-20 09:08:49 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "booking" => {}}
+nil
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:25:in 'ApplicationController#authenticate_user!'
+  [1m[36mBooking Load (0.8ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = '6' /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:10:in 'Enumerable#map'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:10:in 'Enumerable#map'
+  [1m[36mSportsField Load (1.0ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."id" = 3 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:10:in 'Enumerable#map'
+Completed 200 OK in 182ms (Views: 0.3ms | ActiveRecord: 47.8ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-20 09:09:03 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "booking" => {}}
+nil
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:25:in 'ApplicationController#authenticate_user!'
+  [1m[36mBooking Load (1.0ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = '6' /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:10:in 'Enumerable#map'
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:10:in 'Enumerable#map'
+  [1m[36mSportsField Load (1.3ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."id" = 3 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:10:in 'Enumerable#map'
+Completed 200 OK in 43ms (Views: 0.2ms | ActiveRecord: 5.9ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-20 09:09:26 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "booking" => {}}
+nil
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:26:in 'ApplicationController#authenticate_user!'
+  [1m[36mBooking Load (0.6ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = '6' /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:10:in 'Enumerable#map'
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:10:in 'Enumerable#map'
+  [1m[36mSportsField Load (1.1ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."id" = 3 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:10:in 'Enumerable#map'
+Completed 200 OK in 13058ms (Views: 0.3ms | ActiveRecord: 55.8ms (4 queries, 0 cached) | GC: 107.7ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-20 09:09:58 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "booking" => {}}
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:24:in 'ApplicationController#authenticate_user!'
+#<User id: 6, name: "John Doe", email: [FILTERED], phone_number: "1234567890", role: "user", status: true, created_at: "2025-08-19 11:32:50.826446000 +0000", updated_at: "2025-08-19 11:32:50.826446000 +0000">
+  [1m[36mBooking Load (0.7ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = '6' /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:10:in 'Enumerable#map'
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:10:in 'Enumerable#map'
+  [1m[36mSportsField Load (1.2ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."id" = 3 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:10:in 'Enumerable#map'
+Completed 200 OK in 139ms (Views: 0.2ms | ActiveRecord: 47.3ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-20 09:10:19 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "booking" => {}}
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:24:in 'ApplicationController#authenticate_user!'
+#<User id: 6, name: "John Doe", email: [FILTERED], phone_number: "1234567890", role: "user", status: true, created_at: "2025-08-19 11:32:50.826446000 +0000", updated_at: "2025-08-19 11:32:50.826446000 +0000">
+  [1m[36mBooking Load (0.6ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = '6' /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:10:in 'Enumerable#map'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:10:in 'Enumerable#map'
+  [1m[36mSportsField Load (1.1ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."id" = 3 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:10:in 'Enumerable#map'
+Completed 200 OK in 173ms (Views: 0.2ms | ActiveRecord: 52.5ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-20 09:10:27 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "booking" => {}}
+  [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:24:in 'ApplicationController#authenticate_user!'
+#<User id: 6, name: "John Doe", email: [FILTERED], phone_number: "1234567890", role: "user", status: true, created_at: "2025-08-19 11:32:50.826446000 +0000", updated_at: "2025-08-19 11:32:50.826446000 +0000">
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = '6' /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:10:in 'Enumerable#map'
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:10:in 'Enumerable#map'
+  [1m[36mSportsField Load (1.2ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."id" = 3 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:10:in 'Enumerable#map'
+Completed 200 OK in 206ms (Views: 0.2ms | ActiveRecord: 54.9ms (4 queries, 0 cached) | GC: 38.4ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-20 09:11:12 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (5.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+Processing by BookingsController#index as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "booking" => {}}
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 6 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:24:in 'ApplicationController#authenticate_user!'
+  [1m[36mSportsField Load (39.5ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" /* loading for pp */ LIMIT 11 /*application='NepalTruf'*/[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT 11 /*application='NepalTruf'*/[0m
+  [1m[36mSportsField Load (1.4ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."id" = 4 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mSportsField Load (1.5ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."owner_id" = '5' LIMIT 1 /*application='NepalTruf'*/[0m
+Completed 500 Internal Server Error in 657840ms (ActiveRecord: 72.0ms (1 query, 0 cached) | GC: 121.0ms)
+
+
+  
+SystemExit (exit):
+  
+(rdbg)//mnt/e/rails/NepalTrufBE/app/controllers/application_controller.rb:1:in 'Kernel#exit'
+(rdbg)//mnt/e/rails/NepalTrufBE/app/controllers/application_controller.rb:1:in 'ApplicationController#authenticate_user!'
+app/controllers/application_controller.rb:25:in 'ApplicationController#authenticate_user!'
+Started POST "/login" for ::1 at 2025-08-20 10:51:45 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (8.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+Processing by AuthenticateController#login as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "authenticate" => {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NoMethodError (undefined method 'is_admin?' for an instance of AuthenticateController):
+  
+app/controllers/application_controller.rb:38:in 'ApplicationController#set_tenant'
+Started POST "/login" for ::1 at 2025-08-20 10:52:02 +0000
+Processing by AuthenticateController#login as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "authenticate" => {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NoMethodError (undefined method 'is_admin?' for class User):
+  
+app/controllers/application_controller.rb:38:in 'ApplicationController#set_tenant'
+Started POST "/login" for ::1 at 2025-08-20 10:52:33 +0000
+Processing by AuthenticateController#login as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "authenticate" => {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NoMethodError (undefined method 'is_admin?' for class User):
+  
+app/controllers/application_controller.rb:38:in 'ApplicationController#set_tenant'
+Started POST "/login" for ::1 at 2025-08-20 10:52:45 +0000
+Processing by AuthenticateController#login as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "authenticate" => {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 1.6ms)
+
+
+  
+NoMethodError (undefined method 'true?' for an instance of AuthenticateController):
+  
+app/controllers/application_controller.rb:38:in 'ApplicationController#set_tenant'
+Started POST "/login" for ::1 at 2025-08-20 10:52:59 +0000
+Processing by AuthenticateController#login as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "authenticate" => {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NameError (uninitialized constant ApplicationController::SportField):
+  
+app/controllers/application_controller.rb:39:in 'ApplicationController#set_tenant'
+Started POST "/login" for ::1 at 2025-08-20 10:53:43 +0000
+Processing by AuthenticateController#login as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "authenticate" => {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}}
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NoMethodError (undefined method 'id' for nil):
+  
+app/controllers/application_controller.rb:39:in 'ApplicationController#set_tenant'
+Started POST "/login" for ::1 at 2025-08-20 10:54:15 +0000
+Processing by AuthenticateController#login as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "authenticate" => {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}}
+Completed 500 Internal Server Error in 39201ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 22.5ms)
+
+
+  
+NoMethodError (undefined method 'id' for nil):
+  
+app/controllers/application_controller.rb:40:in 'ApplicationController#set_tenant'
+Started POST "/login" for ::1 at 2025-08-20 10:54:58 +0000
+Processing by AuthenticateController#login as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "authenticate" => {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}}
+Completed 500 Internal Server Error in 269459ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 27.2ms)
+
+
+  
+NoMethodError (undefined method 'id' for nil):
+  
+app/controllers/application_controller.rb:40:in 'ApplicationController#set_tenant'
+Started POST "/login" for ::1 at 2025-08-20 10:59:44 +0000
+Processing by AuthenticateController#login as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "authenticate" => {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'gyawali@gmail.com' LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/application_controller.rb:39:in 'ApplicationController#set_tenant'
+  [1m[36mSportsField Load (1.4ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."owner_id" = '5' LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/application_controller.rb:40:in 'ApplicationController#set_tenant'
+Completed 500 Internal Server Error in 210ms (ActiveRecord: 65.9ms (2 queries, 0 cached) | GC: 2.9ms)
+
+
+  
+NoMethodError (undefined method 'id' for nil):
+  
+app/controllers/application_controller.rb:42:in 'ApplicationController#set_tenant'
+Started POST "/login" for ::1 at 2025-08-20 11:00:15 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (6.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+Processing by AuthenticateController#login as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "authenticate" => {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}}
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'gyawali@gmail.com' LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/application_controller.rb:38:in 'ApplicationController#set_tenant'
+  [1m[36mSportsField Load (2.2ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."owner_id" = '5' LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/application_controller.rb:39:in 'ApplicationController#set_tenant'
+  [1m[36mSportsField Load (1.2ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."id" = 5 LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ (rdbg)//mnt/e/rails/NepalTrufBE/app/controllers/application_controller.rb:1:in 'ApplicationController#set_tenant'
+  [1m[36mCACHE SportsField Load (0.1ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."id" = 5 LIMIT 1[0m
+  ↳ (rdbg)//mnt/e/rails/NepalTrufBE/app/controllers/application_controller.rb:1:in 'ApplicationController#set_tenant'
+  [1m[36mCACHE SportsField Load (0.0ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."owner_id" = '5' LIMIT 1[0m
+  ↳ (rdbg)//mnt/e/rails/NepalTrufBE/app/controllers/application_controller.rb:1:in 'ApplicationController#set_tenant'
+Completed 500 Internal Server Error in 79060ms (ActiveRecord: 90.4ms (5 queries, 2 cached) | GC: 114.2ms)
+
+
+  
+NoMethodError (undefined method 'id' for nil):
+  
+app/controllers/application_controller.rb:41:in 'ApplicationController#set_tenant'
+Started POST "/login" for ::1 at 2025-08-20 11:02:01 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (5.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+Processing by AuthenticateController#login as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "authenticate" => {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}}
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'gyawali@gmail.com' LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/application_controller.rb:38:in 'ApplicationController#set_tenant'
+  [1m[36mSportsField Load (1.9ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."owner_id" = '5' LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/application_controller.rb:39:in 'ApplicationController#set_tenant'
+Completed 500 Internal Server Error in 205ms (ActiveRecord: 77.7ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+ArgumentError (wrong number of arguments (given 1, expected 0)):
+  
+app/controllers/application_controller.rb:36:in 'set_tenant'
+app/controllers/application_controller.rb:40:in 'ApplicationController#set_tenant'
+Started POST "/login" for ::1 at 2025-08-20 11:02:47 +0000
+Processing by AuthenticateController#login as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "authenticate" => {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}}
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'gyawali@gmail.com' LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/application_controller.rb:38:in 'ApplicationController#set_tenant'
+  [1m[36mSportsField Load (1.1ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."owner_id" = '5' LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/application_controller.rb:39:in 'ApplicationController#set_tenant'
+Completed 500 Internal Server Error in 186ms (ActiveRecord: 58.9ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NoMethodError (undefined method 'set_current_tenant' for an instance of AuthenticateController):
+  
+app/controllers/application_controller.rb:40:in 'ApplicationController#set_tenant'
+Started POST "/login" for ::1 at 2025-08-20 11:03:27 +0000
+Processing by AuthenticateController#login as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "authenticate" => {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}}
+  [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'gyawali@gmail.com' LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/application_controller.rb:38:in 'ApplicationController#set_tenant'
+  [1m[36mSportsField Load (1.3ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."owner_id" = '5' LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/application_controller.rb:39:in 'ApplicationController#set_tenant'
+  [1m[36mCACHE User Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'gyawali@gmail.com' LIMIT 1[0m
+  ↳ app/controllers/authenticate_controller.rb:6:in 'AuthenticateController#login'
+Completed 200 OK in 493ms (Views: 0.8ms | ActiveRecord: 55.7ms (3 queries, 1 cached) | GC: 0.6ms)
+
+
+  [1m[36mUser Load (44.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1 /*application='NepalTruf'*/[0m
+Started POST "/login" for ::1 at 2025-08-20 11:12:56 +0000
+Processing by AuthenticateController#login as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "authenticate" => {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}}
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 2.7ms)
+
+
+  
+NoMethodError (undefined method 'id' for nil):
+  
+app/controllers/application_controller.rb:40:in 'ApplicationController#set_tenant'
+Started POST "/login" for ::1 at 2025-08-20 11:13:15 +0000
+Processing by AuthenticateController#login as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "authenticate" => {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}}
+  [1m[36mSportsField Load (26.1ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."owner_id" IS NULL LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/application_controller.rb:40:in 'ApplicationController#set_tenant'
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'gyawali@gmail.com' LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/authenticate_controller.rb:6:in 'AuthenticateController#login'
+Completed 200 OK in 297ms (Views: 0.1ms | ActiveRecord: 27.3ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-20 11:14:08 +0000
+  
+SyntaxError (/mnt/e/rails/NepalTrufBE/app/controllers/bookings_controller.rb:22: syntax errors found
+  [2m20 | [m        sports_field_name: booking.sports_field&.name
+  [2m21 | [m      }
+[1;31m> [m[2m22 | [m    end
+  [2m   | [m[1;31m^[m expected a block beginning with `{` to end with `}`
+  [2m   | [m    [1;31m^~~[m unexpected 'end', assuming it is closing the parent 'do'..'end' block
+[1;31m> [m[2m23 | [m  }
+  [2m   | [m  [1;31m^[m unexpected '}', ignoring it
+  [2m24 | [m  end
+  [2m25 | [m
+):
+  
+app/controllers/bookings_controller.rb:22: syntax errors found
+Started POST "/login" for ::1 at 2025-08-20 11:19:53 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (5.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+Processing by AuthenticateController#login as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "authenticate" => {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}}
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NoMethodError (undefined method 'id' for nil):
+  
+app/controllers/application_controller.rb:38:in 'ApplicationController#set_tenant'
+Started POST "/login" for ::1 at 2025-08-20 11:20:24 +0000
+Processing by AuthenticateController#login as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "authenticate" => {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}}
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+  
+NoMethodError (undefined method 'id' for nil):
+  
+app/controllers/application_controller.rb:37:in 'ApplicationController#set_tenant'
+Started POST "/login" for ::1 at 2025-08-20 11:27:44 +0000
+Processing by AuthenticateController#login as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "authenticate" => {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}}
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'gyawali@gmail.com' LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/authenticate_controller.rb:7:in 'AuthenticateController#login'
+Completed 200 OK in 388ms (Views: 0.3ms | ActiveRecord: 64.9ms (1 query, 0 cached) | GC: 2.5ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-20 11:27:52 +0000
+  
+SyntaxError (/mnt/e/rails/NepalTrufBE/app/models/booking.rb:2: syntax errors found
+  [2m1 | [mclass Booking < ApplicationRecord
+[1;31m> [m[2m2 | [m    acts_as_tenant : (:sports_field)
+  [2m  | [m                   [1;31m^[m unexpected ':', ignoring it
+  [2m  | [m                   [1;31m^[m unexpected ':', expecting end-of-input
+  [2m3 | [m    belongs_to :user, foreign_key: :user_id
+  [2m4 | [m    belongs_to :sports_field,foreign_key: :sports_field_id
+):
+  
+app/models/booking.rb:2: syntax errors found
+Started GET "/bookings" for ::1 at 2025-08-20 11:28:31 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "booking" => {}}
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 48.7ms (0 queries, 0 cached) | GC: 1.1ms)
+
+
+  
+NoMethodError (undefined method 'id' for nil):
+  
+app/controllers/application_controller.rb:37:in 'ApplicationController#set_tenant'
+Started GET "/bookings" for ::1 at 2025-08-20 11:29:04 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "booking" => {}}
+Completed 500 Internal Server Error in 89695ms (ActiveRecord: 38.2ms (0 queries, 0 cached) | GC: 28.7ms)
+
+
+  
+NoMethodError (undefined method 'id' for nil):
+  
+app/controllers/application_controller.rb:38:in 'ApplicationController#set_tenant'
+Started POST "/login" for ::1 at 2025-08-20 11:30:56 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (5.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+Processing by AuthenticateController#login as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "authenticate" => {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}}
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'gyawali@gmail.com' LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/authenticate_controller.rb:7:in 'AuthenticateController#login'
+Completed 200 OK in 384ms (Views: 0.3ms | ActiveRecord: 65.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-20 11:31:10 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "booking" => {}}
+Completed 500 Internal Server Error in 15754ms (ActiveRecord: 6.5ms (0 queries, 0 cached) | GC: 34.7ms)
+
+
+  
+NoMethodError (undefined method 'id' for nil):
+  
+app/controllers/application_controller.rb:36:in 'ApplicationController#set_tenant'
+Started GET "/bookings" for ::1 at 2025-08-20 11:31:42 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "booking" => {}}
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 37.3ms (0 queries, 0 cached) | GC: 0.1ms)
+
+
+  
+NoMethodError (undefined method 'id' for nil):
+  
+app/controllers/application_controller.rb:35:in 'ApplicationController#set_tenant'
+Started POST "/login" for ::1 at 2025-08-20 11:33:19 +0000
+Processing by AuthenticateController#login as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "authenticate" => {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}}
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'gyawali@gmail.com' LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/authenticate_controller.rb:7:in 'AuthenticateController#login'
+Completed 200 OK in 271ms (Views: 0.2ms | ActiveRecord: 42.8ms (1 query, 0 cached) | GC: 0.1ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-20 11:33:27 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "booking" => {}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:22:in 'ApplicationController#authenticate_user!'
+  [1m[36mBooking Load (0.7ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:10:in 'Enumerable#map'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN (1, 6) /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:10:in 'Enumerable#map'
+  [1m[36mSportsField Load (1.1ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."id" IN (1, 3) /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:10:in 'Enumerable#map'
+Completed 200 OK in 177502ms (Views: 1.4ms | ActiveRecord: 11.2ms (4 queries, 0 cached) | GC: 58.1ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-20 11:36:34 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "booking" => {}}
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 5 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:22:in 'ApplicationController#authenticate_user!'
+  [1m[36mBooking Load (0.7ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:10:in 'Enumerable#map'
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IN (1, 6) /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:10:in 'Enumerable#map'
+  [1m[36mSportsField Load (1.3ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."id" IN (1, 3) /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:10:in 'Enumerable#map'
+Completed 200 OK in 4183ms (Views: 0.5ms | ActiveRecord: 56.3ms (4 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mUser Load (24.8ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT 11 /*application='NepalTruf'*/[0m
+Started POST "/login" for ::1 at 2025-08-20 11:37:27 +0000
+Processing by AuthenticateController#login as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "authenticate" => {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'Johnn.Doee@example.com' LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/authenticate_controller.rb:7:in 'AuthenticateController#login'
+Completed 401 Unauthorized in 5ms (Views: 0.2ms | ActiveRecord: 1.3ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2025-08-20 11:38:00 +0000
+Processing by AuthenticateController#login as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "authenticate" => {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'John.Doe@example.com' LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/authenticate_controller.rb:7:in 'AuthenticateController#login'
+Completed 401 Unauthorized in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2025-08-20 11:38:09 +0000
+Processing by AuthenticateController#login as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "authenticate" => {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'JohnDoe@example.com' LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/authenticate_controller.rb:7:in 'AuthenticateController#login'
+Completed 401 Unauthorized in 3ms (Views: 0.1ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1 /*application='NepalTruf'*/[0m
+Started POST "/login" for ::1 at 2025-08-20 11:39:29 +0000
+Processing by AuthenticateController#login as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "authenticate" => {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'johnn.doee@example.com' LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/authenticate_controller.rb:7:in 'AuthenticateController#login'
+Completed 200 OK in 201ms (Views: 0.2ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-20 11:39:37 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "booking" => {}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:22:in 'ApplicationController#authenticate_user!'
+Completed 403 Forbidden in 7287ms (Views: 0.1ms | ActiveRecord: 1.3ms (1 query, 0 cached) | GC: 7.9ms)
+
+
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mUser Update (5.3ms)[0m  [1m[33mUPDATE "users" SET "role" = 'user', "updated_at" = '2025-08-20 11:40:30.230313' WHERE "users"."id" = 8 /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (1728.5ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 /*application='NepalTruf'*/[0m
+Started GET "/bookings" for ::1 at 2025-08-20 11:41:33 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "booking" => {}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:22:in 'ApplicationController#authenticate_user!'
+  [1m[36mBooking Load (0.9ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = '8' /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:10:in 'Enumerable#map'
+Completed 200 OK in 5604ms (Views: 0.1ms | ActiveRecord: 2.1ms (2 queries, 0 cached) | GC: 10.1ms)
+
+
+  [1m[36mBooking Load (0.8ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = '8' LIMIT 1 /*application='NepalTruf'*/[0m

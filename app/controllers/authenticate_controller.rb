@@ -1,5 +1,6 @@
 class AuthenticateController < ApplicationController
   skip_before_action :authenticate_user!, only: [:login, :register]
+  skip_before_action :set_tenant, only: [:login, :register]
 
   # POST /login
   def login
