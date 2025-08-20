@@ -1,24 +1,24 @@
-# README
+**NepalTrufBE is a Ruby on Rails backend for sports field management in Nepal.**
+Purpose: Let owners register physical sports venues (futsal, cricsal, football grounds, cricket grounds, arcade, etc.) and allow users to discover, book by the hour, pay (online or POS), and leave reviews.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+**Features:
 
-* Ruby version
+--Venue & field CRUD for 
+--Hourly booking with availability 
+--Payments (online & POS) with 
+--Ratings & 
+--Authentication & role-based access (user, owner, admin)
 
-* System dependencies
 
-* Configuration
+****Tech stack: Rails API mode, SQLite (dev), Docker support, JWT authentication (suggested).
 
-* Database creation
 
-* Database initialization
+****Setup: Clone repo → install gems → migrate DB → run server (or use Docker).
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+****Domain model: Users, Venues, Fields, Bookings, Payments, Reviews, and future Events.
 
-* Deployment instructions
 
-* ...
+****Roadmap: Events across fields, external orgs, dynamic pricing, webhooks, calendar integration, CDN uploads, multi-tenant support, i18n.
+
