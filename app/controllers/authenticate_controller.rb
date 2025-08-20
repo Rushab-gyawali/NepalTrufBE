@@ -6,10 +6,8 @@ class AuthenticateController < ApplicationController
     user = User.find_by(email: auth_params[:email])
     if user&.valid_password?(auth_params[:password])
       token = JsonWebToken.encode(user_id: user.id)
-
       response.set_header('Authorization', "Bearer #{token}")
       render json: {
-        token: token,
         user: { id: user.id, email: user.email, role: user.role }
       }, status: :ok
     else

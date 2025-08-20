@@ -1,5 +1,4 @@
 class BookingsController < ApplicationController
-  include Pundit::Authorization
   before_action :set_booking, only: %i[ show update destroy ]
   before_action :authenticate_user!
 
