@@ -52,3 +52,4 @@ group :development, :test do
 end
 
 gem "pundit", "~> 2.5"
+gem 'acts_as_tenant'

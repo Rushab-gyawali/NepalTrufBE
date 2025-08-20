@@ -1,4 +1,5 @@
 class Booking < ApplicationRecord
+    acts_as_tenant :sports_field
     belongs_to :user, foreign_key: :user_id
     belongs_to :sports_field,foreign_key: :sports_field_id
 
