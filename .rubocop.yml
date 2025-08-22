@@ -1,0 +1,76 @@
+inherit_from: .rubocop_todo.yml
+# -------------------------------
+# Load RuboCop Rails extension
+# -------------------------------
+plugins:
+  - rubocop-rails
+
+# -------------------------------
+# Global settings
+# -------------------------------
+AllCops:
+  TargetRubyVersion: 3.4
+  NewCops: enable
+  Exclude:
+    - 'bin/*'
+    - 'db/schema.rb'
+    - 'db/migrate/*'
+    - 'node_modules/**/*'
+    - 'tmp/**/*'
+    - 'vendor/**/*'
+
+# -------------------------------
+# Rails specific rules
+# -------------------------------
+Rails:
+  Enabled: true
+
+# -------------------------------
+# Naming conventions
+# -------------------------------
+Naming/VariableName:
+  Enabled: true
+  EnforcedStyle: snake_case
+
+Naming/MethodName:
+  Enabled: true
+  EnforcedStyle: snake_case
+
+# -------------------------------
+# Layout and formatting
+# -------------------------------
+Layout/LineLength:
+  Max: 120
+
+Layout/EmptyLineBetweenDefs:
+  Enabled: true
+
+Layout/IndentationConsistency:
+  Enabled: true
+
+# -------------------------------
+# Style rules
+# -------------------------------
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+# -------------------------------
+# Rails ActiveRecord / Associations
+# -------------------------------
+Rails/HasManyOrHasOneDependent:
+  Enabled: true
+
+Rails/SkipsModelValidations:
+  Enabled: true
+
+# -------------------------------
+# Security
+# -------------------------------
+Security/Eval:
+  Enabled: true

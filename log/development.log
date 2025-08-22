@@ -7236,3 +7236,1099 @@ Completed 200 OK in 5604ms (Views: 0.1ms | ActiveRecord: 2.1ms (2 queries, 0 cac
 
 
   [1m[36mBooking Load (0.8ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = '8' LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mBooking Load (1738.7ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = '8' AND "bookings"."sports_field_id" = '1' /* loading for pp */ LIMIT 11 /*application='NepalTruf'*/[0m
+Started GET "/bookings" for ::1 at 2025-08-20 11:54:16 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "booking" => {}}
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2025-08-21 04:27:26 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (5.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+Processing by AuthenticateController#login as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "authenticate" => {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}}
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'johnn.doee@example.com' LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/authenticate_controller.rb:7:in 'AuthenticateController#login'
+Completed 200 OK in 616ms (Views: 0.7ms | ActiveRecord: 80.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (4.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+Migrating to CreateOrganizations (20250821071155)
+  [1m[36mActiveRecord::InternalMetadata Load (4.3ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+Migrating to CreateOrganizations (20250821071155)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "organizations" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "organization_name" varchar, "organization_registered_date" varchar, "is_active" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250821071155') RETURNING "version" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (21.7ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (4.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+Migrating to CreateOrganizations (20250821071155)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[35m (2.3ms)[0m  [1m[35mDROP TABLE "organizations" /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.0ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20250821071155' /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (32.5ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (4.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+Migrating to CreateOrganizations (20250821071155)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "organizations" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "organization_name" varchar, "slug" varchar, "organization_registered_date" varchar, "is_active" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250821071155') RETURNING "version" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (20.7ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (3.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+Migrating to AddOrganizationToUser (20250821071912)
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[35m (4.5ms)[0m  [1m[35mALTER TABLE "users" ADD "organization_id" varchar /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250821071912') RETURNING "version" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (34.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (4.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+Migrating to AddOrganizationToUser (20250821071912)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mPRAGMA foreign_keys /*application='NepalTruf'*/[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='NepalTruf'*/[0m
+  [1m[35m (0.5ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='NepalTruf'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='NepalTruf'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ausers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "phone_number" varchar, "role" varchar, "status" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime(6), "remember_created_at" datetime(6), "organization_id" varchar) /*application='NepalTruf'*/[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_ausers_on_reset_password_token" ON "ausers" ("reset_password_token") /*application='NepalTruf'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "ausers" ("id","name","email","phone_number","role","status","created_at","updated_at","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","organization_id")
+                     SELECT "id","name","email","phone_number","role","status","created_at","updated_at","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","organization_id" FROM "users" /*application='NepalTruf'*/[0m
+  [1m[35m (4.4ms)[0m  [1m[35mDROP TABLE "users" /*application='NepalTruf'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "phone_number" varchar, "role" varchar, "status" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime(6), "remember_created_at" datetime(6)) /*application='NepalTruf'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token") /*application='NepalTruf'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "users" ("id","name","email","phone_number","role","status","created_at","updated_at","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at")
+                     SELECT "id","name","email","phone_number","role","status","created_at","updated_at","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at" FROM "ausers" /*application='NepalTruf'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "ausers" /*application='NepalTruf'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='NepalTruf'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.0ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20250821071912' /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (1497.3ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (4.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+Migrating to AddOrganizationToUser (20250821071912)
+  [1m[36mActiveRecord::InternalMetadata Load (4.6ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+Migrating to AddOrganizationToUser (20250821071912)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[35m (4.1ms)[0m  [1m[35mALTER TABLE "users" ADD "organization_id" varchar /*application='NepalTruf'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "sports_field" ADD "organization_id" varchar /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[31mROLLBACK TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (4.7ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+Migrating to AddOrganizationToUser (20250821071912)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[35m (3.6ms)[0m  [1m[35mALTER TABLE "users" ADD "organization_id" varchar /*application='NepalTruf'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "sports_fields" ADD "organization_id" varchar /*application='NepalTruf'*/[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mPRAGMA foreign_keys /*application='NepalTruf'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='NepalTruf'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='NepalTruf'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='NepalTruf'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asports_fields" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "owner_id" varchar, "field_type" varchar, "address" varchar, "latitude" decimal, "longitude" decimal, "hourly_rate" decimal, "description" varchar, "image_url" varchar, "is_active" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "organization_id" varchar) /*application='NepalTruf'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "asports_fields" ("id","name","owner_id","field_type","address","latitude","longitude","hourly_rate","description","image_url","is_active","created_at","updated_at","organization_id")
+                     SELECT "id","name","owner_id","field_type","address","latitude","longitude","hourly_rate","description","image_url","is_active","created_at","updated_at","organization_id" FROM "sports_fields" /*application='NepalTruf'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE "sports_fields" /*application='NepalTruf'*/[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "sports_fields" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "field_type" varchar, "address" varchar, "latitude" decimal, "longitude" decimal, "hourly_rate" decimal, "description" varchar, "image_url" varchar, "is_active" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "organization_id" varchar) /*application='NepalTruf'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "sports_fields" ("id","name","field_type","address","latitude","longitude","hourly_rate","description","image_url","is_active","created_at","updated_at","organization_id")
+                     SELECT "id","name","field_type","address","latitude","longitude","hourly_rate","description","image_url","is_active","created_at","updated_at","organization_id" FROM "asports_fields" /*application='NepalTruf'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "asports_fields" /*application='NepalTruf'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='NepalTruf'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250821071912') RETURNING "version" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (4.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (4.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+Migrating to AddOrganizationToUser (20250821071912)
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[35m (3.7ms)[0m  [1m[35mALTER TABLE "sports_fields" ADD "owner_id" varchar /*application='NepalTruf'*/[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[35mPRAGMA foreign_keys /*application='NepalTruf'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='NepalTruf'*/[0m
+  [1m[35m (0.5ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='NepalTruf'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='NepalTruf'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asports_fields" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "field_type" varchar, "address" varchar, "latitude" decimal, "longitude" decimal, "hourly_rate" decimal, "description" varchar, "image_url" varchar, "is_active" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "organization_id" varchar, "owner_id" varchar) /*application='NepalTruf'*/[0m
+  [1m[35mSQL (2.0ms)[0m  [1m[32mINSERT INTO "asports_fields" ("id","name","field_type","address","latitude","longitude","hourly_rate","description","image_url","is_active","created_at","updated_at","organization_id","owner_id")
+                     SELECT "id","name","field_type","address","latitude","longitude","hourly_rate","description","image_url","is_active","created_at","updated_at","organization_id","owner_id" FROM "sports_fields" /*application='NepalTruf'*/[0m
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE "sports_fields" /*application='NepalTruf'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "sports_fields" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "field_type" varchar, "address" varchar, "latitude" decimal, "longitude" decimal, "hourly_rate" decimal, "description" varchar, "image_url" varchar, "is_active" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "owner_id" varchar) /*application='NepalTruf'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "sports_fields" ("id","name","field_type","address","latitude","longitude","hourly_rate","description","image_url","is_active","created_at","updated_at","owner_id")
+                     SELECT "id","name","field_type","address","latitude","longitude","hourly_rate","description","image_url","is_active","created_at","updated_at","owner_id" FROM "asports_fields" /*application='NepalTruf'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE "asports_fields" /*application='NepalTruf'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='NepalTruf'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='NepalTruf'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA foreign_keys /*application='NepalTruf'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='NepalTruf'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='NepalTruf'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='NepalTruf'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ausers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "phone_number" varchar, "role" varchar, "status" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime(6), "remember_created_at" datetime(6), "organization_id" varchar) /*application='NepalTruf'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "tindex_ausers_on_reset_password_token" ON "ausers" ("reset_password_token") /*application='NepalTruf'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "ausers" ("id","name","email","phone_number","role","status","created_at","updated_at","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","organization_id")
+                     SELECT "id","name","email","phone_number","role","status","created_at","updated_at","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at","organization_id" FROM "users" /*application='NepalTruf'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "users" /*application='NepalTruf'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "phone_number" varchar, "role" varchar, "status" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime(6), "remember_created_at" datetime(6)) /*application='NepalTruf'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token") /*application='NepalTruf'*/[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "users" ("id","name","email","phone_number","role","status","created_at","updated_at","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at")
+                     SELECT "id","name","email","phone_number","role","status","created_at","updated_at","encrypted_password","reset_password_token","reset_password_sent_at","remember_created_at" FROM "ausers" /*application='NepalTruf'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE "ausers" /*application='NepalTruf'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='NepalTruf'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = '20250821071912' /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (51.8ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (5.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+Migrating to AddOrganizationToUser (20250821071912)
+  [1m[36mActiveRecord::InternalMetadata Load (5.0ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+Migrating to AddOrganizationToUser (20250821071912)
+  [1m[36mActiveRecord::InternalMetadata Load (4.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+Migrating to AddOrganizationToUser (20250821071912)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[35mPRAGMA foreign_keys /*application='NepalTruf'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='NepalTruf'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='NepalTruf'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='NepalTruf'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TEMPORARY TABLE "asports_fields" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "field_type" varchar, "address" varchar, "latitude" decimal, "longitude" decimal, "hourly_rate" decimal, "description" varchar, "image_url" varchar, "is_active" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "owner_id" varchar) /*application='NepalTruf'*/[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "asports_fields" ("id","name","field_type","address","latitude","longitude","hourly_rate","description","image_url","is_active","created_at","updated_at","owner_id")
+                     SELECT "id","name","field_type","address","latitude","longitude","hourly_rate","description","image_url","is_active","created_at","updated_at","owner_id" FROM "sports_fields" /*application='NepalTruf'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "sports_fields" /*application='NepalTruf'*/[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "sports_fields" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "field_type" varchar, "address" varchar, "latitude" decimal, "longitude" decimal, "hourly_rate" decimal, "description" varchar, "image_url" varchar, "is_active" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL) /*application='NepalTruf'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[32mINSERT INTO "sports_fields" ("id","name","field_type","address","latitude","longitude","hourly_rate","description","image_url","is_active","created_at","updated_at")
+                     SELECT "id","name","field_type","address","latitude","longitude","hourly_rate","description","image_url","is_active","created_at","updated_at" FROM "asports_fields" /*application='NepalTruf'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "asports_fields" /*application='NepalTruf'*/[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='NepalTruf'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='NepalTruf'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "organization_id" varchar /*application='NepalTruf'*/[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "sports_fields" ADD "organization_id" varchar /*application='NepalTruf'*/[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "bookings" ADD "organization_id" varchar /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20250821071912') RETURNING "version" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (41.7ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (6.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA foreign_keys /*application='NepalTruf'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='NepalTruf'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='NepalTruf'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='NepalTruf'*/[0m
+  [1m[36mTruncate Tables (398.2ms)[0m  [1m[31mDELETE FROM "sports_fields";
+DELETE FROM "organizations";
+DELETE FROM "payments";
+DELETE FROM "bookings";
+DELETE FROM "users"[0m
+  [1m[35m (1.4ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='NepalTruf'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (2.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" /* loading for pp */ LIMIT 11 /*application='NepalTruf'*/[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT 11 /*application='NepalTruf'*/[0m
+  [1m[36mSportsField Load (1.2ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" /* loading for pp */ LIMIT 11 /*application='NepalTruf'*/[0m
+  [1m[36mBooking Load (1.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" /* loading for pp */ LIMIT 11 /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (5.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Create (15.8ms)[0m  [1m[32mINSERT INTO "organizations" ("organization_name", "slug", "organization_registered_date", "is_active", "created_at", "updated_at") VALUES ('Truf Nepal', 'truf-nepal', '2025-08-21', 1, '2025-08-21 07:41:36.881568', '2025-08-21 07:41:36.881568') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Create (3.7ms)[0m  [1m[32mINSERT INTO "organizations" ("organization_name", "slug", "organization_registered_date", "is_active", "created_at", "updated_at") VALUES ('Sports Hub', 'sports-hub', '2025-08-21', 1, '2025-08-21 07:41:36.929625', '2025-08-21 07:41:36.929625') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (5.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" /* loading for pp */ LIMIT 11 /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (4.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = 'environment' ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA foreign_keys /*application='NepalTruf'*/[0m
+  [1m[35mSQL (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys /*application='NepalTruf'*/[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON /*application='NepalTruf'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF /*application='NepalTruf'*/[0m
+  [1m[36mTruncate Tables (34.8ms)[0m  [1m[31mDELETE FROM "sports_fields";
+DELETE FROM "organizations";
+DELETE FROM "payments";
+DELETE FROM "bookings";
+DELETE FROM "users"[0m
+  [1m[35m (1.4ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0 /*application='NepalTruf'*/[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1 /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (37.9ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" /* loading for pp */ LIMIT 11 /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Create (6.2ms)[0m  [1m[32mINSERT INTO "organizations" ("organization_name", "slug", "organization_registered_date", "is_active", "created_at", "updated_at") VALUES ('Truf Nepal', 'TRF', '2025-08-21', 1, '2025-08-21 07:47:54.550353', '2025-08-21 07:47:54.550353') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (53.5ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Create (4.8ms)[0m  [1m[32mINSERT INTO "organizations" ("organization_name", "slug", "organization_registered_date", "is_active", "created_at", "updated_at") VALUES ('Sports Hub', 'SPO', '2025-08-21', 1, '2025-08-21 07:48:13.062928', '2025-08-21 07:48:13.062928') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (8.0ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" /* loading for pp */ LIMIT 11 /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (42.7ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" /* loading for pp */ LIMIT 11 /*application='NepalTruf'*/[0m
+  [1m[36mBooking Delete All (27.1ms)[0m  [1m[31mDELETE FROM "bookings" /*application='NepalTruf'*/[0m
+  [1m[36mSportsField Delete All (2.2ms)[0m  [1m[31mDELETE FROM "sports_fields" /*application='NepalTruf'*/[0m
+  [1m[36mUser Delete All (3.2ms)[0m  [1m[31mDELETE FROM "users" /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Delete All (2.0ms)[0m  [1m[31mDELETE FROM "organizations" /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (34.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" /* loading for pp */ LIMIT 11 /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Create (8.0ms)[0m  [1m[32mINSERT INTO "organizations" ("organization_name", "slug", "organization_registered_date", "is_active", "created_at", "updated_at") VALUES ('Truf Nepal', 'tru', '2025-08-21', 1, '2025-08-21 07:58:10.799606', '2025-08-21 07:58:10.799606') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (55.3ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (4.8ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Create (7.2ms)[0m  [1m[32mINSERT INTO "organizations" ("organization_name", "slug", "organization_registered_date", "is_active", "created_at", "updated_at") VALUES ('Sports Hub', 'spo', '2025-08-21', 1, '2025-08-21 07:58:10.870492', '2025-08-21 07:58:10.870492') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (7.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" /* loading for pp */ LIMIT 11 /*application='NepalTruf'*/[0m
+  [1m[36mBooking Delete All (2.2ms)[0m  [1m[31mDELETE FROM "bookings" /*application='NepalTruf'*/[0m
+  [1m[36mSportsField Delete All (2.1ms)[0m  [1m[31mDELETE FROM "sports_fields" /*application='NepalTruf'*/[0m
+  [1m[36mUser Delete All (2.8ms)[0m  [1m[31mDELETE FROM "users" /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Delete All (2.2ms)[0m  [1m[31mDELETE FROM "organizations" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Create (10.1ms)[0m  [1m[32mINSERT INTO "organizations" ("organization_name", "slug", "organization_registered_date", "is_active", "created_at", "updated_at") VALUES ('Truf Nepal', 'tru', '2025-08-21', 1, '2025-08-21 07:59:41.041000', '2025-08-21 07:59:41.041000') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Create (5.2ms)[0m  [1m[32mINSERT INTO "organizations" ("organization_name", "slug", "organization_registered_date", "is_active", "created_at", "updated_at") VALUES ('Sports Hub', 'spo', '2025-08-21', 1, '2025-08-21 07:59:41.061608', '2025-08-21 07:59:41.061608') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (1.7ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" /* loading for pp */ LIMIT 11 /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (3.6ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 7 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mSportsField Create (0.1ms)[0m  [1m[32mINSERT INTO "sports_fields" ("name", "field_type", "address", "latitude", "longitude", "hourly_rate", "description", "image_url", "is_active", "created_at", "updated_at", "organization_id") VALUES ('Football Ground - Truf', 'Football', 'Kathmandu', 27.7, 85.3, 1500.0, 'Truf football field', 'https://via.placeholder.com/150', 1, '2025-08-21 07:59:55.513692', '2025-08-21 07:59:55.513692', '7') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (4.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 7 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mSportsField Create (0.1ms)[0m  [1m[32mINSERT INTO "sports_fields" ("name", "field_type", "address", "latitude", "longitude", "hourly_rate", "description", "image_url", "is_active", "created_at", "updated_at", "organization_id") VALUES ('Cricket Pitch - Truf', 'Cricket', 'Kathmandu', 27.71, 85.31, 2000.0, 'Truf cricket pitch', 'https://via.placeholder.com/150', 1, '2025-08-21 08:00:02.486233', '2025-08-21 08:00:02.486233', '7') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (6.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (3.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 8 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mSportsField Create (0.1ms)[0m  [1m[32mINSERT INTO "sports_fields" ("name", "field_type", "address", "latitude", "longitude", "hourly_rate", "description", "image_url", "is_active", "created_at", "updated_at", "organization_id") VALUES ('Football Ground - Hub', 'Football', 'Lalitpur', 27.69, 85.32, 1200.0, 'Hub football field', 'https://via.placeholder.com/150', 1, '2025-08-21 08:00:02.509241', '2025-08-21 08:00:02.509241', '8') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (2.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 8 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mSportsField Create (0.7ms)[0m  [1m[32mINSERT INTO "sports_fields" ("name", "field_type", "address", "latitude", "longitude", "hourly_rate", "description", "image_url", "is_active", "created_at", "updated_at", "organization_id") VALUES ('Tennis Court - Hub', 'Tennis', 'Lalitpur', 27.68, 85.33, 1800.0, 'Hub tennis court', 'https://via.placeholder.com/150', 1, '2025-08-21 08:00:02.518541', '2025-08-21 08:00:02.518541', '8') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mUser Exists? (2.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user1@gmail.com' LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 7 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone_number", "role", "status", "created_at", "updated_at", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "organization_id") VALUES ('Admin Org1', 'user1@gmail.com', '980000001', 'admin', 1, '2025-08-21 08:01:43.640855', '2025-08-21 08:01:43.640855', '$2a$12$wy7naDPzqDHcyTfl2KwbmezGftGfbtpmSpaPV0bj6L2GBsYwRPbjC', NULL, NULL, NULL, '7') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mUser Exists? (2.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user2@gmail.com' LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 7 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone_number", "role", "status", "created_at", "updated_at", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "organization_id") VALUES ('User1 Org1', 'user2@gmail.com', '980000002', 'user', 1, '2025-08-21 08:01:50.017133', '2025-08-21 08:01:50.017133', '$2a$12$R35.4pXp8EuDAj7ep5YzWeWtaoBhiArgpdA18lmWwFu/rbpjXrW9y', NULL, NULL, NULL, '7') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mUser Exists? (3.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user3@gmail.com' LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (0.0ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 7 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone_number", "role", "status", "created_at", "updated_at", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "organization_id") VALUES ('User2 Org1', 'user3@gmail.com', '980000003', 'user', 1, '2025-08-21 08:01:50.224524', '2025-08-21 08:01:50.224524', '$2a$12$RLUyJNR..OI3p4pB1wcT.O0fRBjxch5/IjGNAEL8jSuAxNFMMJbai', NULL, NULL, NULL, '7') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mUser Exists? (3.4ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user4@gmail.com' LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 7 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone_number", "role", "status", "created_at", "updated_at", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "organization_id") VALUES ('User3 Org1', 'user4@gmail.com', '980000004', 'user', 1, '2025-08-21 08:01:50.439651', '2025-08-21 08:01:50.439651', '$2a$12$yGuFOm2f5co2Uwfyi7qB9unprPhB86pg5zsow0ZHKmfuwLVXPsUOS', NULL, NULL, NULL, '7') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mUser Exists? (3.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user5@gmail.com' LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 7 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone_number", "role", "status", "created_at", "updated_at", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "organization_id") VALUES ('Staff Org1', 'user5@gmail.com', '980000005', 'staff', 1, '2025-08-21 08:01:50.642465', '2025-08-21 08:01:50.642465', '$2a$12$RyOHiLzMY1wrqS1YiAWCIet0eNIDmELcZYudRtVDCupx1iezGuIJC', NULL, NULL, NULL, '7') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mUser Exists? (2.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user6@gmail.com' LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 8 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone_number", "role", "status", "created_at", "updated_at", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "organization_id") VALUES ('Admin Org2', 'user6@gmail.com', '980000006', 'admin', 1, '2025-08-21 08:01:56.096400', '2025-08-21 08:01:56.096400', '$2a$12$XgmPxHXGrqjDvAd3FS2D0u6wmzJtzUoYRySFFoU33yqXvxhg174JC', NULL, NULL, NULL, '8') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mUser Exists? (3.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user7@gmail.com' LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 8 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone_number", "role", "status", "created_at", "updated_at", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "organization_id") VALUES ('User1 Org2', 'user7@gmail.com', '980000007', 'user', 1, '2025-08-21 08:01:56.297956', '2025-08-21 08:01:56.297956', '$2a$12$QDZi9gQbmaP9z0gAItOqkeUqEVHh044BXbaUV.TFdx7OKNDoLc27.', NULL, NULL, NULL, '8') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mUser Exists? (3.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user8@gmail.com' LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 8 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone_number", "role", "status", "created_at", "updated_at", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "organization_id") VALUES ('User2 Org2', 'user8@gmail.com', '980000008', 'user', 1, '2025-08-21 08:01:56.498767', '2025-08-21 08:01:56.498767', '$2a$12$P9SEn4DETVj1ufU7d2SIZ.d17Lvrt/YlDuKM07kDfF8l0JY.KEbsO', NULL, NULL, NULL, '8') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mUser Exists? (3.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user9@gmail.com' LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 8 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone_number", "role", "status", "created_at", "updated_at", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "organization_id") VALUES ('User3 Org2', 'user9@gmail.com', '980000009', 'user', 1, '2025-08-21 08:01:56.704839', '2025-08-21 08:01:56.704839', '$2a$12$.sCHM29vTaLPRsqiPTuJ9eXHXWtDh36ok9YOynHxen9fw0FpAho2a', NULL, NULL, NULL, '8') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mUser Exists? (3.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user10@gmail.com' LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 8 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone_number", "role", "status", "created_at", "updated_at", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "organization_id") VALUES ('Staff Org2', 'user10@gmail.com', '980000010', 'staff', 1, '2025-08-21 08:01:56.918229', '2025-08-21 08:01:56.918229', '$2a$12$9xwE/pFnSWAKMfUSI39tOu2/EKLdZ28DQK1cKYtKP3RZoaSn.qGry', NULL, NULL, NULL, '8') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (1.7ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" /* loading for pp */ LIMIT 11 /*application='NepalTruf'*/[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT 11 /*application='NepalTruf'*/[0m
+  [1m[36mSportsField Load (1.1ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" /* loading for pp */ LIMIT 11 /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mSportsField Load (1.9ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."id" = 5 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 7 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mBooking Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "bookings" WHERE "bookings"."sports_field_id" = '5' AND (start_time < '2025-08-21 10:00:00' AND end_time > '2025-08-21 08:00:00') LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mBooking Create (0.1ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "sports_field_id", "start_time", "end_time", "status", "total_price", "payment_status", "created_at", "updated_at", "organization_id") VALUES ('10', '5', '2025-08-21 08:00:00', '2025-08-21 10:00:00', 'confirmed', 3000.0, 'paid', '2025-08-21 08:03:55.351796', '2025-08-21 08:03:55.351796', '7') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mSportsField Load (3.1ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."id" = 5 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (0.0ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 7 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mBooking Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "bookings" WHERE "bookings"."sports_field_id" = '5' AND (start_time < '2025-08-21 14:00:00' AND end_time > '2025-08-21 12:00:00') LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mBooking Create (0.1ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "sports_field_id", "start_time", "end_time", "status", "total_price", "payment_status", "created_at", "updated_at", "organization_id") VALUES ('10', '5', '2025-08-21 12:00:00', '2025-08-21 14:00:00', 'confirmed', 3000.0, 'paid', '2025-08-21 08:04:00.272519', '2025-08-21 08:04:00.272519', '7') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mSportsField Load (2.9ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."id" = 5 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 7 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mBooking Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "bookings" WHERE "bookings"."sports_field_id" = '5' AND (start_time < '2025-08-20 11:00:00' AND end_time > '2025-08-20 09:00:00') LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mBooking Create (0.1ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "sports_field_id", "start_time", "end_time", "status", "total_price", "payment_status", "created_at", "updated_at", "organization_id") VALUES ('10', '5', '2025-08-20 09:00:00', '2025-08-20 11:00:00', 'confirmed', 3000.0, 'paid', '2025-08-21 08:04:00.304440', '2025-08-21 08:04:00.304440', '7') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mSportsField Load (3.0ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."id" = 5 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 7 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mBooking Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "bookings" WHERE "bookings"."sports_field_id" = '5' AND (start_time < '2025-08-20 15:00:00' AND end_time > '2025-08-20 13:00:00') LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mBooking Create (0.1ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "sports_field_id", "start_time", "end_time", "status", "total_price", "payment_status", "created_at", "updated_at", "organization_id") VALUES ('10', '5', '2025-08-20 13:00:00', '2025-08-20 15:00:00', 'confirmed', 3000.0, 'paid', '2025-08-21 08:04:00.330383', '2025-08-21 08:04:00.330383', '7') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mSportsField Load (3.3ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."id" = 5 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (0.2ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 7 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mBooking Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "bookings" WHERE "bookings"."sports_field_id" = '5' AND (start_time < '2025-08-20 19:00:00' AND end_time > '2025-08-20 17:00:00') LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mBooking Create (0.1ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "sports_field_id", "start_time", "end_time", "status", "total_price", "payment_status", "created_at", "updated_at", "organization_id") VALUES ('10', '5', '2025-08-20 17:00:00', '2025-08-20 19:00:00', 'confirmed', 3000.0, 'paid', '2025-08-21 08:04:00.358549', '2025-08-21 08:04:00.358549', '7') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mSportsField Load (2.7ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."id" = 6 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (0.0ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 7 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mBooking Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "bookings" WHERE "bookings"."sports_field_id" = '6' AND (start_time < '2025-08-21 11:00:00' AND end_time > '2025-08-21 09:00:00') LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mBooking Create (0.1ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "sports_field_id", "start_time", "end_time", "status", "total_price", "payment_status", "created_at", "updated_at", "organization_id") VALUES ('10', '6', '2025-08-21 09:00:00', '2025-08-21 11:00:00', 'confirmed', 4000.0, 'paid', '2025-08-21 08:04:07.109364', '2025-08-21 08:04:07.109364', '7') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mSportsField Load (2.8ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."id" = 6 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (0.0ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 7 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mBooking Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "bookings" WHERE "bookings"."sports_field_id" = '6' AND (start_time < '2025-08-21 17:00:00' AND end_time > '2025-08-21 15:00:00') LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mBooking Create (0.1ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "sports_field_id", "start_time", "end_time", "status", "total_price", "payment_status", "created_at", "updated_at", "organization_id") VALUES ('10', '6', '2025-08-21 15:00:00', '2025-08-21 17:00:00', 'confirmed', 4000.0, 'paid', '2025-08-21 08:04:07.120848', '2025-08-21 08:04:07.120848', '7') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mSportsField Load (2.8ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."id" = 6 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (0.0ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 7 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mBooking Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "bookings" WHERE "bookings"."sports_field_id" = '6' AND (start_time < '2025-08-20 10:00:00' AND end_time > '2025-08-20 08:00:00') LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mBooking Create (0.1ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "sports_field_id", "start_time", "end_time", "status", "total_price", "payment_status", "created_at", "updated_at", "organization_id") VALUES ('10', '6', '2025-08-20 08:00:00', '2025-08-20 10:00:00', 'confirmed', 4000.0, 'paid', '2025-08-21 08:04:07.131527', '2025-08-21 08:04:07.131527', '7') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mSportsField Load (2.5ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."id" = 6 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (0.0ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 7 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mBooking Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "bookings" WHERE "bookings"."sports_field_id" = '6' AND (start_time < '2025-08-20 14:00:00' AND end_time > '2025-08-20 12:00:00') LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mBooking Create (0.1ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "sports_field_id", "start_time", "end_time", "status", "total_price", "payment_status", "created_at", "updated_at", "organization_id") VALUES ('10', '6', '2025-08-20 12:00:00', '2025-08-20 14:00:00', 'confirmed', 4000.0, 'paid', '2025-08-21 08:04:07.141187', '2025-08-21 08:04:07.141187', '7') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mSportsField Load (2.9ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."id" = 6 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (0.0ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 7 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mBooking Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "bookings" WHERE "bookings"."sports_field_id" = '6' AND (start_time < '2025-08-20 18:00:00' AND end_time > '2025-08-20 16:00:00') LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mBooking Create (0.1ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "sports_field_id", "start_time", "end_time", "status", "total_price", "payment_status", "created_at", "updated_at", "organization_id") VALUES ('10', '6', '2025-08-20 16:00:00', '2025-08-20 18:00:00', 'confirmed', 4000.0, 'paid', '2025-08-21 08:04:07.155054', '2025-08-21 08:04:07.155054', '7') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (11.6ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" /* loading for pp */ LIMIT 11 /*application='NepalTruf'*/[0m
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT 11 /*application='NepalTruf'*/[0m
+Started POST "/login" for ::1 at 2025-08-21 08:06:21 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+Processing by AuthenticateController#login as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "authenticate" => {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'user1@example.com' LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/authenticate_controller.rb:7:in 'AuthenticateController#login'
+Completed 401 Unauthorized in 161ms (Views: 1.0ms | ActiveRecord: 16.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2025-08-21 08:06:59 +0000
+Processing by AuthenticateController#login as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "authenticate" => {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'user1@gmail.com' LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/authenticate_controller.rb:7:in 'AuthenticateController#login'
+Completed 200 OK in 527ms (Views: 0.2ms | ActiveRecord: 7.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-21 08:07:16 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"booking" => {}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 8 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:22:in 'ApplicationController#authenticate_user!'
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 8532ms (ActiveRecord: 4.0ms (1 query, 0 cached) | GC: 30.7ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-21 08:07:32 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"booking" => {}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:22:in 'ApplicationController#authenticate_user!'
+  [1m[36mSportsField Load (0.7ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."owner_id" = 9 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:37:in 'ApplicationController#set_tenant'
+Completed 500 Internal Server Error in 3153ms (ActiveRecord: 2.4ms (2 queries, 0 cached) | GC: 53.9ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: sports_fields.owner_id:
+SELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."owner_id" = 9 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/
+                                                    ^)
+Caused by: SQLite3::SQLException (no such column: sports_fields.owner_id:
+SELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."owner_id" = 9 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/
+                                                    ^)
+
+Information for: ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: sports_fields.owner_id:
+SELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."owner_id" = 9 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/
+                                                    ^):
+  
+
+Information for cause: SQLite3::SQLException (no such column: sports_fields.owner_id:
+SELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."owner_id" = 9 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/
+                                                    ^):
+  
+app/controllers/application_controller.rb:37:in 'ApplicationController#set_tenant'
+Started GET "/sports_field" for ::1 at 2025-08-21 08:08:04 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/sports_field"):
+  
+Started GET "/sports_fields" for ::1 at 2025-08-21 08:08:32 +0000
+Processing by SportsFieldsController#index as */*
+  [1m[36mSportsField Load (0.8ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in 'SportsFieldsController#index'
+Completed 200 OK in 58ms (Views: 20.9ms | ActiveRecord: 13.1ms (1 query, 0 cached) | GC: 1.7ms)
+
+
+  [1m[36mSportsField Load (1.3ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" /* loading for pp */ LIMIT 11 /*application='NepalTruf'*/[0m
+Started GET "/sports_fields?Content-Type=application/json&Authorization=Bearer%20eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo5LCJleHAiOjE3NTU4NTAwMjB9.nyRp5vbNbOv22C85UY2ZQGtAmQZ_kBKjjVbn_t-BSh8" for ::1 at 2025-08-21 08:10:13 +0000
+Processing by SportsFieldsController#index as */*
+  Parameters: {"Content-Type" => "application/json", "Authorization" => "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo5LCJleHAiOjE3NTU4NTAwMjB9.nyRp5vbNbOv22C85UY2ZQGtAmQZ_kBKjjVbn_t-BSh8"}
+  [1m[36mSportsField Load (0.5ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in 'SportsFieldsController#index'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2025-08-21 08:10:30 +0000
+Processing by AuthenticateController#login as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "authenticate" => {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'user2@gmail.com' LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/authenticate_controller.rb:7:in 'AuthenticateController#login'
+Completed 200 OK in 217ms (Views: 0.2ms | ActiveRecord: 3.7ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started POST "/login" for ::1 at 2025-08-21 08:10:33 +0000
+Processing by AuthenticateController#login as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "authenticate" => {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'user2@gmail.com' LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/authenticate_controller.rb:7:in 'AuthenticateController#login'
+Completed 200 OK in 193ms (Views: 0.1ms | ActiveRecord: 0.6ms (1 query, 0 cached) | GC: 0.2ms)
+
+
+Started GET "/sports_fields?Content-Type=application/json&Authorization=Bearer%20eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMCwiZXhwIjoxNzU1ODUwMjM0fQ.BNyCAVR864h5kV94g2d-tGcFywcQFSvvBVf-enzM69c" for ::1 at 2025-08-21 08:10:51 +0000
+Processing by SportsFieldsController#index as */*
+  Parameters: {"Content-Type" => "application/json", "Authorization" => "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMCwiZXhwIjoxNzU1ODUwMjM0fQ.BNyCAVR864h5kV94g2d-tGcFywcQFSvvBVf-enzM69c"}
+  [1m[36mSportsField Load (0.9ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in 'SportsFieldsController#index'
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.5ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-21 08:10:59 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"booking" => {}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 9 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:21:in 'ApplicationController#authenticate_user!'
+  [1m[36mSportsField Load (1.3ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."owner_id" = 9 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:36:in 'ApplicationController#set_tenant'
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 3.3ms (2 queries, 0 cached) | GC: 1.0ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: sports_fields.owner_id:
+SELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."owner_id" = 9 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/
+                                                    ^)
+Caused by: SQLite3::SQLException (no such column: sports_fields.owner_id:
+SELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."owner_id" = 9 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/
+                                                    ^)
+
+Information for: ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: sports_fields.owner_id:
+SELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."owner_id" = 9 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/
+                                                    ^):
+  
+
+Information for cause: SQLite3::SQLException (no such column: sports_fields.owner_id:
+SELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."owner_id" = 9 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/
+                                                    ^):
+  
+app/controllers/application_controller.rb:36:in 'ApplicationController#set_tenant'
+Started GET "/bookings" for ::1 at 2025-08-21 08:14:25 +0000
+  
+SyntaxError (/mnt/e/rails/NepalTrufBE/app/controllers/application_controller.rb:36: syntax errors found
+  [2m34 | [m    return unless @current_user
+  [2m35 | [m
+[1;31m> [m[2m36 | [m... : @current_user.organization_id)
+  [2m   | [m    [1;31m^[m unexpected ':', ignoring it
+  [2m   | [m    [1;31m^[m unexpected ':', expecting end-of-input
+  [2m   | [m    [1;31m^[m unexpected ':'; expected a `)` to close the arguments
+  [2m   | [m                                   [1;31m^[m unexpected ')', ignoring it
+  [2m   | [m                                   [1;31m^[m unexpected ')', expecting end-of-input
+  [2m37 | [m    set_current_tenant(sports_field) if sports_field.present?
+  [2m38 | [m  end
+):
+  
+app/controllers/application_controller.rb:36: syntax errors found
+app/controllers/bookings_controller.rb:1:in '<main>'
+Started GET "/bookings" for ::1 at 2025-08-21 08:15:47 +0000
+  
+SyntaxError (/mnt/e/rails/NepalTrufBE/app/controllers/application_controller.rb:36: syntax errors found
+  [2m34 | [m    return unless @current_user
+  [2m35 | [mdebugger
+[1;31m> [m[2m36 | [m... : @current_user.organization_id)
+  [2m   | [m    [1;31m^[m unexpected ':', ignoring it
+  [2m   | [m    [1;31m^[m unexpected ':', expecting end-of-input
+  [2m   | [m    [1;31m^[m unexpected ':'; expected a `)` to close the arguments
+  [2m   | [m                                   [1;31m^[m unexpected ')', ignoring it
+  [2m   | [m                                   [1;31m^[m unexpected ')', expecting end-of-input
+  [2m37 | [m    set_current_tenant(current_tenant) if current_tenant.present?
+  [2m38 | [m  end
+):
+  
+app/controllers/application_controller.rb:36: syntax errors found
+app/controllers/bookings_controller.rb:1:in '<main>'
+Started GET "/bookings" for ::1 at 2025-08-21 08:15:59 +0000
+  
+SyntaxError (/mnt/e/rails/NepalTrufBE/app/controllers/application_controller.rb:36: syntax errors found
+  [2m34 | [m    return unless @current_user
+  [2m35 | [m    debugger
+[1;31m> [m[2m36 | [m... : @current_user.organization_id)
+  [2m   | [m    [1;31m^[m unexpected ':', ignoring it
+  [2m   | [m    [1;31m^[m unexpected ':', expecting end-of-input
+  [2m   | [m    [1;31m^[m unexpected ':'; expected a `)` to close the arguments
+  [2m   | [m                                   [1;31m^[m unexpected ')', ignoring it
+  [2m   | [m                                   [1;31m^[m unexpected ')', expecting end-of-input
+  [2m37 | [m    set_current_tenant(current_tenant) if current_tenant.present?
+  [2m38 | [m  end
+):
+  
+app/controllers/application_controller.rb:36: syntax errors found
+app/controllers/bookings_controller.rb:1:in '<main>'
+Started GET "/bookings" for ::1 at 2025-08-21 08:16:13 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+  
+SyntaxError (/mnt/e/rails/NepalTrufBE/app/controllers/application_controller.rb:36: syntax errors found
+  [2m34 | [m    return unless @current_user
+  [2m35 | [m    debugger
+[1;31m> [m[2m36 | [m... : @current_user.organization_id)
+  [2m   | [m    [1;31m^[m unexpected ':', ignoring it
+  [2m   | [m    [1;31m^[m unexpected ':', expecting end-of-input
+  [2m   | [m    [1;31m^[m unexpected ':'; expected a `)` to close the arguments
+  [2m   | [m                                   [1;31m^[m unexpected ')', ignoring it
+  [2m   | [m                                   [1;31m^[m unexpected ')', expecting end-of-input
+  [2m37 | [m    set_current_tenant(current_tenant) if current_tenant.present?
+  [2m38 | [m  end
+):
+  
+app/controllers/application_controller.rb:36: syntax errors found
+app/controllers/bookings_controller.rb:1:in '<main>'
+Started GET "/bookings" for ::1 at 2025-08-21 08:16:53 +0000
+  
+SyntaxError (/mnt/e/rails/NepalTrufBE/app/controllers/application_controller.rb:36: syntax errors found
+  [2m34 | [m    return unless @current_user
+  [2m35 | [m    debugger
+[1;31m> [m[2m36 | [m... : @current_user.organization_id)
+  [2m   | [m    [1;31m^[m unexpected ':', ignoring it
+  [2m   | [m    [1;31m^[m unexpected ':', expecting end-of-input
+  [2m   | [m    [1;31m^[m unexpected ':'; expected a `)` to close the arguments
+  [2m   | [m                                   [1;31m^[m unexpected ')', ignoring it
+  [2m   | [m                                   [1;31m^[m unexpected ')', expecting end-of-input
+  [2m37 | [m    set_current_tenant(current_tenant) if current_tenant.present?
+  [2m38 | [m  end
+):
+  
+app/controllers/application_controller.rb:36: syntax errors found
+app/controllers/bookings_controller.rb:1:in '<main>'
+Started POST "/login" for ::1 at 2025-08-21 08:17:21 +0000
+  
+SyntaxError (/mnt/e/rails/NepalTrufBE/app/controllers/application_controller.rb:36: syntax errors found
+  [2m34 | [m    return unless @current_user
+  [2m35 | [m    debugger
+[1;31m> [m[2m36 | [m... : @current_user.organization_id)
+  [2m   | [m    [1;31m^[m unexpected ':', ignoring it
+  [2m   | [m    [1;31m^[m unexpected ':', expecting end-of-input
+  [2m   | [m    [1;31m^[m unexpected ':'; expected a `)` to close the arguments
+  [2m   | [m                                   [1;31m^[m unexpected ')', ignoring it
+  [2m   | [m                                   [1;31m^[m unexpected ')', expecting end-of-input
+  [2m37 | [m    set_current_tenant(current_tenant) if current_tenant.present?
+  [2m38 | [m  end
+):
+  
+app/controllers/application_controller.rb:36: syntax errors found
+app/controllers/authenticate_controller.rb:1:in '<main>'
+Started POST "/login" for ::1 at 2025-08-21 08:17:45 +0000
+Processing by AuthenticateController#login as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "authenticate" => {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'user2@gmail.com' LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/authenticate_controller.rb:7:in 'AuthenticateController#login'
+Completed 200 OK in 358ms (Views: 0.3ms | ActiveRecord: 22.5ms (1 query, 0 cached) | GC: 16.2ms)
+
+
+  [1m[36mSportsField Load (1.9ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."organization_id" = '7' LIMIT 1 /*application='NepalTruf'*/[0m
+Started POST "/login" for ::1 at 2025-08-21 08:19:09 +0000
+Processing by AuthenticateController#login as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "authenticate" => {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}}
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'user2@gmail.com' LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/authenticate_controller.rb:7:in 'AuthenticateController#login'
+Completed 200 OK in 286ms (Views: 0.6ms | ActiveRecord: 33.1ms (1 query, 0 cached) | GC: 1.6ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-21 08:19:24 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"booking" => {}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:22:in 'ApplicationController#authenticate_user!'
+  [1m[36mOrganization Load (1.0ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."organization_id" = '7' LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:36:in 'ApplicationController#set_tenant'
+Completed 500 Internal Server Error in 7235ms (ActiveRecord: 5.6ms (2 queries, 0 cached) | GC: 28.7ms)
+
+
+  
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: organizations.organization_id:
+SELECT "organizations".* FROM "organizations" WHERE "organizations"."organization_id" = '7' LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/
+                                                    ^)
+Caused by: SQLite3::SQLException (no such column: organizations.organization_id:
+SELECT "organizations".* FROM "organizations" WHERE "organizations"."organization_id" = '7' LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/
+                                                    ^)
+
+Information for: ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: organizations.organization_id:
+SELECT "organizations".* FROM "organizations" WHERE "organizations"."organization_id" = '7' LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/
+                                                    ^):
+  
+
+Information for cause: SQLite3::SQLException (no such column: organizations.organization_id:
+SELECT "organizations".* FROM "organizations" WHERE "organizations"."organization_id" = '7' LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/
+                                                    ^):
+  
+app/controllers/application_controller.rb:36:in 'ApplicationController#set_tenant'
+Started GET "/bookings" for ::1 at 2025-08-21 08:20:11 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"booking" => {}}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 10 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:22:in 'ApplicationController#authenticate_user!'
+  [1m[36mOrganization Load (1.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 7 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:36:in 'ApplicationController#set_tenant'
+  [1m[36mBooking Load (0.8ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."sports_field_id" = '7' AND "bookings"."user_id" = '10' /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:9:in 'Enumerable#map'
+Completed 200 OK in 4472ms (Views: 0.2ms | ActiveRecord: 21.2ms (3 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mBooking Load (1.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" /* loading for pp */ LIMIT 11 /*application='NepalTruf'*/[0m
+Started POST "/login" for ::1 at 2025-08-21 08:21:38 +0000
+Processing by AuthenticateController#login as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "authenticate" => {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'user10@gmail.com' LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/authenticate_controller.rb:7:in 'AuthenticateController#login'
+Completed 200 OK in 192ms (Views: 0.2ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-21 08:21:59 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"booking" => {}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 18 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:22:in 'ApplicationController#authenticate_user!'
+  [1m[36mOrganization Load (0.4ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 8 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:36:in 'ApplicationController#set_tenant'
+Completed 403 Forbidden in 5988ms (Views: 0.1ms | ActiveRecord: 0.9ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-21 08:22:37 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"booking" => {}}
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 2ms (ActiveRecord: 11.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-21 08:22:40 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"booking" => {}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 18 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:21:in 'ApplicationController#authenticate_user!'
+  [1m[36mOrganization Load (0.9ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 8 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:35:in 'ApplicationController#set_tenant'
+Completed 403 Forbidden in 93ms (Views: 0.2ms | ActiveRecord: 7.3ms (2 queries, 0 cached) | GC: 3.0ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-21 08:23:18 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"booking" => {}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 18 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:21:in 'ApplicationController#authenticate_user!'
+  [1m[36mOrganization Load (0.3ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 8 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:35:in 'ApplicationController#set_tenant'
+Completed 403 Forbidden in 5ms (Views: 0.1ms | ActiveRecord: 0.8ms (2 queries, 0 cached) | GC: 0.0ms)
+
+
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT 11 /*application='NepalTruf'*/[0m
+  [1m[36mBooking Delete All (3.5ms)[0m  [1m[31mDELETE FROM "bookings" /*application='NepalTruf'*/[0m
+  [1m[36mBooking Delete All (3.2ms)[0m  [1m[31mDELETE FROM "bookings" /*application='NepalTruf'*/[0m
+  [1m[36mUser Delete All (4.3ms)[0m  [1m[31mDELETE FROM "users" /*application='NepalTruf'*/[0m
+  [1m[36mSportsField Delete All (4.0ms)[0m  [1m[31mDELETE FROM "sports_fields" /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Delete All (3.7ms)[0m  [1m[31mDELETE FROM "organizations" /*application='NepalTruf'*/[0m
+  [1m[35m (6.7ms)[0m  [1m[33mUPDATE sqlite_sequence SET seq = 0 WHERE name = 'bookings' /*application='NepalTruf'*/[0m
+  [1m[35m (3.0ms)[0m  [1m[33mUPDATE sqlite_sequence SET seq = 0 WHERE name = 'users' /*application='NepalTruf'*/[0m
+  [1m[35m (3.4ms)[0m  [1m[33mUPDATE sqlite_sequence SET seq = 0 WHERE name = 'sports_fields' /*application='NepalTruf'*/[0m
+  [1m[35m (3.3ms)[0m  [1m[33mUPDATE sqlite_sequence SET seq = 0 WHERE name = 'organizations' /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Create (13.0ms)[0m  [1m[32mINSERT INTO "organizations" ("organization_name", "slug", "organization_registered_date", "is_active", "created_at", "updated_at") VALUES ('Test Org', 'test-org', '2025-08-21', 1, '2025-08-21 08:28:39.693952', '2025-08-21 08:28:39.693952') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (1.8ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" /* loading for pp */ LIMIT 11 /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mUser Exists? (1.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user1@gmail.com' LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 1 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone_number", "role", "status", "created_at", "updated_at", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "organization_id") VALUES ('User One', 'user1@gmail.com', '980000001', 'user', 1, '2025-08-21 08:28:57.100133', '2025-08-21 08:28:57.100133', '$2a$12$AJgjBaJSjUgjsLP0awP1TOHczOBjEQ2zbH7HhgovEK8sTXFcqSaDi', NULL, NULL, NULL, '1') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mUser Exists? (3.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'user2@gmail.com' LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 1 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone_number", "role", "status", "created_at", "updated_at", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "organization_id") VALUES ('User Two', 'user2@gmail.com', '980000002', 'user', 1, '2025-08-21 08:28:57.311483', '2025-08-21 08:28:57.311483', '$2a$12$2F99W3YB7Af8kVoj3mxhDOWz6Xn57KO.DKAnbg8ws4KsTOMvLNj5S', NULL, NULL, NULL, '1') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (3.7ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 1 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mSportsField Create (0.1ms)[0m  [1m[32mINSERT INTO "sports_fields" ("name", "field_type", "address", "latitude", "longitude", "hourly_rate", "description", "image_url", "is_active", "created_at", "updated_at", "organization_id") VALUES ('Football Ground', 'Football', 'Kathmandu', 27.7, 85.3, 1500.0, 'Test football field', 'https://via.placeholder.com/150', 1, '2025-08-21 08:29:04.915831', '2025-08-21 08:29:04.915831', '1') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mSportsField Load (3.2ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."id" = 1 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 1 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mBooking Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "bookings" WHERE "bookings"."sports_field_id" = '1' AND (start_time < '2025-08-21 12:00:00' AND end_time > '2025-08-21 10:00:00') LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mBooking Create (0.1ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "sports_field_id", "start_time", "end_time", "status", "total_price", "payment_status", "created_at", "updated_at", "organization_id") VALUES ('1', '1', '2025-08-21 10:00:00', '2025-08-21 12:00:00', 'confirmed', 3000.0, 'paid', '2025-08-21 08:29:17.306268', '2025-08-21 08:29:17.306268', '1') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mSportsField Load (3.7ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."id" = 1 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 2 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 1 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mBooking Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "bookings" WHERE "bookings"."sports_field_id" = '1' AND (start_time < '2025-08-21 16:00:00' AND end_time > '2025-08-21 14:00:00') LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mBooking Create (0.2ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "sports_field_id", "start_time", "end_time", "status", "total_price", "payment_status", "created_at", "updated_at", "organization_id") VALUES ('2', '1', '2025-08-21 14:00:00', '2025-08-21 16:00:00', 'confirmed', 3000.0, 'paid', '2025-08-21 08:29:17.335690', '2025-08-21 08:29:17.335690', '1') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mSportsField Load (3.2ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."id" = 1 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 1 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mBooking Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "bookings" WHERE "bookings"."sports_field_id" = '1' AND (start_time < '2025-08-20 14:00:00' AND end_time > '2025-08-20 12:00:00') LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mBooking Create (0.1ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "sports_field_id", "start_time", "end_time", "status", "total_price", "payment_status", "created_at", "updated_at", "organization_id") VALUES ('1', '1', '2025-08-20 12:00:00', '2025-08-20 14:00:00', 'confirmed', 3000.0, 'paid', '2025-08-21 08:29:17.361264', '2025-08-21 08:29:17.361264', '1') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (1.7ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" /* loading for pp */ LIMIT 11 /*application='NepalTruf'*/[0m
+  [1m[36mSportsField Load (0.9ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" /* loading for pp */ LIMIT 11 /*application='NepalTruf'*/[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT 11 /*application='NepalTruf'*/[0m
+  [1m[36mBooking Load (0.8ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" /* loading for pp */ LIMIT 11 /*application='NepalTruf'*/[0m
+Started POST "/login" for ::1 at 2025-08-21 08:29:56 +0000
+Processing by AuthenticateController#login as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "authenticate" => {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}}
+  [1m[36mUser Load (27.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'user1@gmail.com' LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/authenticate_controller.rb:7:in 'AuthenticateController#login'
+Completed 200 OK in 235ms (Views: 0.4ms | ActiveRecord: 27.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/sports_fields?Content-Type=application/json&Authorization=Bearer%20eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE3NTU4NTEzOTZ9.6V4Teh7tvapMLi4PlQbUb_9V0wewMC36GUfAcB2-sgs" for ::1 at 2025-08-21 08:30:11 +0000
+Processing by SportsFieldsController#index as */*
+  Parameters: {"Content-Type" => "application/json", "Authorization" => "Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE3NTU4NTEzOTZ9.6V4Teh7tvapMLi4PlQbUb_9V0wewMC36GUfAcB2-sgs"}
+  [1m[36mSportsField Load (1.2ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in 'SportsFieldsController#index'
+Completed 200 OK in 39ms (Views: 17.5ms | ActiveRecord: 4.3ms (1 query, 0 cached) | GC: 1.7ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-21 08:30:18 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"booking" => {}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:21:in 'ApplicationController#authenticate_user!'
+  [1m[36mOrganization Load (0.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 1 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:35:in 'ApplicationController#set_tenant'
+  [1m[36mBooking Load (0.8ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."sports_field_id" = '1' AND "bookings"."user_id" = '1' /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:9:in 'Enumerable#map'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:9:in 'Enumerable#map'
+  [1m[36mSportsField Load (1.2ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."id" = 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:9:in 'Enumerable#map'
+Completed 200 OK in 107ms (Views: 0.7ms | ActiveRecord: 4.7ms (5 queries, 0 cached) | GC: 1.4ms)
+
+
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Create (1.4ms)[0m  [1m[32mINSERT INTO "organizations" ("organization_name", "slug", "organization_registered_date", "is_active", "created_at", "updated_at") VALUES ('New Org', 'new-org', '2025-08-21', 1, '2025-08-21 08:31:01.579797', '2025-08-21 08:31:01.579797') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mUser Exists? (3.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = 'newuser@gmail.com' LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 2 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "phone_number", "role", "status", "created_at", "updated_at", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "organization_id") VALUES ('New User', 'newuser@gmail.com', '980000010', 'user', 1, '2025-08-21 08:31:06.640188', '2025-08-21 08:31:06.640188', '$2a$12$8.BIngn4.xo9updQ1daapuNrJSKuzcO2103mtD81TxZPMcmPnh0pu', NULL, NULL, NULL, '2') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (2.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 2 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mSportsField Create (0.2ms)[0m  [1m[32mINSERT INTO "sports_fields" ("name", "field_type", "address", "latitude", "longitude", "hourly_rate", "description", "image_url", "is_active", "created_at", "updated_at", "organization_id") VALUES ('New Football Ground', 'Football', 'Lalitpur', 27.68, 85.32, 1500.0, 'New tenant football field', 'https://via.placeholder.com/150', 1, '2025-08-21 08:31:13.876271', '2025-08-21 08:31:13.876271', '2') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mBEGIN immediate TRANSACTION /*application='NepalTruf'*/[0m
+  [1m[36mSportsField Load (2.3ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."id" = 2 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 3 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mOrganization Load (0.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 2 LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mBooking Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "bookings" WHERE "bookings"."sports_field_id" = '2' AND (start_time < '2025-08-21 12:00:00' AND end_time > '2025-08-21 10:00:00') LIMIT 1 /*application='NepalTruf'*/[0m
+  [1m[36mBooking Create (0.1ms)[0m  [1m[32mINSERT INTO "bookings" ("user_id", "sports_field_id", "start_time", "end_time", "status", "total_price", "payment_status", "created_at", "updated_at", "organization_id") VALUES ('3', '2', '2025-08-21 10:00:00', '2025-08-21 12:00:00', 'confirmed', 3000.0, 'paid', '2025-08-21 08:31:19.301167', '2025-08-21 08:31:19.301167', '2') RETURNING "id" /*application='NepalTruf'*/[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT TRANSACTION /*application='NepalTruf'*/[0m
+Started GET "/bookings" for ::1 at 2025-08-21 08:31:22 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"booking" => {}}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:21:in 'ApplicationController#authenticate_user!'
+  [1m[36mOrganization Load (1.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 1 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:35:in 'ApplicationController#set_tenant'
+  [1m[36mBooking Load (1.1ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."sports_field_id" = '1' AND "bookings"."user_id" = '1' /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:9:in 'Enumerable#map'
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:9:in 'Enumerable#map'
+  [1m[36mSportsField Load (1.5ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."id" = 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:9:in 'Enumerable#map'
+Completed 200 OK in 24ms (Views: 0.3ms | ActiveRecord: 6.6ms (5 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-21 09:05:31 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+Processing by BookingsController#index as */*
+  Parameters: {"booking" => {}}
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 42570ms (ActiveRecord: 15.4ms (0 queries, 0 cached) | GC: 72.6ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-21 09:06:23 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"booking" => {}}
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 2814ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.6ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-21 09:06:40 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"booking" => {}}
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 15ms (ActiveRecord: 10.9ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2025-08-21 09:06:57 +0000
+Processing by AuthenticateController#login as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "authenticate" => {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'user1@gmail.com' LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/authenticate_controller.rb:7:in 'AuthenticateController#login'
+Completed 200 OK in 293ms (Views: 0.2ms | ActiveRecord: 9.5ms (1 query, 0 cached) | GC: 1.0ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-21 09:07:09 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"booking" => {}}
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 1ms (ActiveRecord: 1.2ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-21 09:07:14 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"booking" => {}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:21:in 'ApplicationController#authenticate_user!'
+  [1m[36mOrganization Load (1.1ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 1 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:35:in 'ApplicationController#set_tenant'
+Completed 500 Internal Server Error in 85ms (ActiveRecord: 4.5ms (2 queries, 0 cached) | GC: 0.5ms)
+
+
+  
+NoMethodError (undefined method 'is_test?' for an instance of User):
+  
+app/policies/booking_policy.rb:6:in 'BookingPolicy::Scope#resolve'
+app/controllers/bookings_controller.rb:6:in 'BookingsController#index'
+Started GET "/bookings" for ::1 at 2025-08-21 09:07:36 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"booking" => {}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:21:in 'ApplicationController#authenticate_user!'
+  [1m[36mOrganization Load (0.7ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 1 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:35:in 'ApplicationController#set_tenant'
+  [1m[36mBooking Load (0.6ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."sports_field_id" = '1' AND "bookings"."user_id" = '1' /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:9:in 'Enumerable#map'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:9:in 'Enumerable#map'
+  [1m[36mSportsField Load (1.0ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."id" = 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:9:in 'Enumerable#map'
+Completed 200 OK in 239ms (Views: 0.3ms | ActiveRecord: 21.1ms (5 queries, 0 cached) | GC: 1.2ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-21 09:07:55 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"booking" => {}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:21:in 'ApplicationController#authenticate_user!'
+  [1m[36mOrganization Load (1.0ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 1 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:35:in 'ApplicationController#set_tenant'
+  [1m[36mBooking Load (1.0ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."sports_field_id" = '1' AND "bookings"."user_id" = '1' /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:9:in 'Enumerable#map'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:9:in 'Enumerable#map'
+  [1m[36mSportsField Load (1.2ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."id" = 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:9:in 'Enumerable#map'
+Completed 200 OK in 129ms (Views: 0.2ms | ActiveRecord: 21.4ms (5 queries, 0 cached) | GC: 1.7ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-21 09:07:59 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"booking" => {}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:21:in 'ApplicationController#authenticate_user!'
+  [1m[36mOrganization Load (0.5ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 1 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:35:in 'ApplicationController#set_tenant'
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."sports_field_id" = '1' AND "bookings"."user_id" = '1' /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:9:in 'Enumerable#map'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:9:in 'Enumerable#map'
+  [1m[36mSportsField Load (0.5ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."id" = 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:9:in 'Enumerable#map'
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 2.5ms (5 queries, 0 cached) | GC: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2025-08-21 09:33:52 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC /*application='NepalTruf'*/[0m
+Processing by AuthenticateController#login as */*
+  Parameters: {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}, "authenticate" => {"user" => {"email" => "[FILTERED]", "password" => "[FILTERED]"}}}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = 'user1@gmail.com' LIMIT 1 /*action='login',application='NepalTruf',controller='authenticate'*/[0m
+  ↳ app/controllers/authenticate_controller.rb:7:in 'AuthenticateController#login'
+Completed 200 OK in 369ms (Views: 0.3ms | ActiveRecord: 21.2ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-21 09:33:55 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"booking" => {}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:21:in 'ApplicationController#authenticate_user!'
+  [1m[36mOrganization Load (1.9ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 1 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:35:in 'ApplicationController#set_tenant'
+  [1m[36mBooking Load (1.5ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."sports_field_id" = '1' AND "bookings"."user_id" = '1' /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:9:in 'Enumerable#map'
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:9:in 'Enumerable#map'
+  [1m[36mSportsField Load (1.9ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."id" = 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:9:in 'Enumerable#map'
+Completed 200 OK in 309ms (Views: 0.6ms | ActiveRecord: 22.8ms (5 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/sports_fields" for ::1 at 2025-08-21 09:34:22 +0000
+Processing by SportsFieldsController#index as */*
+  Parameters: {"sports_field" => {}}
+  [1m[36mSportsField Load (3.9ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in 'SportsFieldsController#index'
+Completed 200 OK in 45ms (Views: 37.6ms | ActiveRecord: 2.1ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-21 09:34:33 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"booking" => {}}
+Filter chain halted as :authenticate_user! rendered or redirected
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms (0 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/bookings" for ::1 at 2025-08-21 09:35:00 +0000
+Processing by BookingsController#index as */*
+  Parameters: {"booking" => {}}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:21:in 'ApplicationController#authenticate_user!'
+  [1m[36mOrganization Load (0.8ms)[0m  [1m[34mSELECT "organizations".* FROM "organizations" WHERE "organizations"."id" = 1 LIMIT 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/application_controller.rb:35:in 'ApplicationController#set_tenant'
+  [1m[36mBooking Load (0.8ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."sports_field_id" = '1' AND "bookings"."user_id" = '1' /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:9:in 'Enumerable#map'
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:9:in 'Enumerable#map'
+  [1m[36mSportsField Load (0.8ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."id" = 1 /*action='index',application='NepalTruf',controller='bookings'*/[0m
+  ↳ app/controllers/bookings_controller.rb:9:in 'Enumerable#map'
+Completed 200 OK in 58ms (Views: 11.9ms | ActiveRecord: 4.9ms (5 queries, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/sports_fields" for ::1 at 2025-08-21 11:03:19 +0000
+Processing by SportsFieldsController#index as HTML
+  [1m[36mSportsField Load (25.1ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in 'SportsFieldsController#index'
+Completed 200 OK in 80ms (Views: 40.5ms | ActiveRecord: 25.0ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/sports_fields" for ::1 at 2025-08-21 11:03:19 +0000
+Processing by SportsFieldsController#index as HTML
+  [1m[36mSportsField Load (0.5ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in 'SportsFieldsController#index'
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/sports_fields" for ::1 at 2025-08-21 11:03:25 +0000
+Processing by SportsFieldsController#index as HTML
+  [1m[36mSportsField Load (0.8ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in 'SportsFieldsController#index'
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/sports_fields" for ::1 at 2025-08-21 11:03:25 +0000
+Processing by SportsFieldsController#index as HTML
+  [1m[36mSportsField Load (0.8ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in 'SportsFieldsController#index'
+Completed 200 OK in 11ms (Views: 8.6ms | ActiveRecord: 0.8ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/sports_fields" for ::1 at 2025-08-21 11:03:29 +0000
+Processing by SportsFieldsController#index as HTML
+  [1m[36mSportsField Load (1.0ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in 'SportsFieldsController#index'
+Completed 200 OK in 9ms (Views: 5.7ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/sports_fields" for ::1 at 2025-08-21 11:03:29 +0000
+Processing by SportsFieldsController#index as HTML
+  [1m[36mSportsField Load (0.4ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in 'SportsFieldsController#index'
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/sports_fields" for ::1 at 2025-08-21 11:03:49 +0000
+Processing by SportsFieldsController#index as HTML
+  [1m[36mSportsField Load (0.4ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in 'SportsFieldsController#index'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/sports_fields" for ::1 at 2025-08-21 11:03:49 +0000
+Processing by SportsFieldsController#index as HTML
+  [1m[36mSportsField Load (0.4ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in 'SportsFieldsController#index'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.4ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/sports_fields" for ::1 at 2025-08-21 11:03:50 +0000
+Processing by SportsFieldsController#index as HTML
+  [1m[36mSportsField Load (0.5ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in 'SportsFieldsController#index'
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.5ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/sports_fields" for ::1 at 2025-08-21 11:03:50 +0000
+Processing by SportsFieldsController#index as HTML
+  [1m[36mSportsField Load (0.7ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in 'SportsFieldsController#index'
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/sports_fields" for ::1 at 2025-08-21 11:03:51 +0000
+Processing by SportsFieldsController#index as HTML
+  [1m[36mSportsField Load (0.7ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in 'SportsFieldsController#index'
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 0.7ms (1 query, 0 cached) | GC: 0.0ms)
+
+
+Started GET "/sports_fields" for ::1 at 2025-08-21 11:03:51 +0000
+Processing by SportsFieldsController#index as HTML
+  [1m[36mSportsField Load (0.9ms)[0m  [1m[34mSELECT "sports_fields".* FROM "sports_fields" WHERE "sports_fields"."is_active" = 1 /*action='index',application='NepalTruf',controller='sports_fields'*/[0m
+  ↳ app/controllers/sports_fields_controller.rb:8:in 'SportsFieldsController#index'
+Completed 200 OK in 16ms (Views: 6.0ms | ActiveRecord: 0.9ms (1 query, 0 cached) | GC: 0.0ms)
+
+

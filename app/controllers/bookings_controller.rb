@@ -1,6 +1,5 @@
 class BookingsController < ApplicationController
   before_action :set_booking, only: %i[ show update destroy ]
-  before_action :authenticate_user!
 
   # GET /bookings
   def index

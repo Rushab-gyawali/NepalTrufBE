@@ -7,9 +7,9 @@ class AuthenticateController < ApplicationController
     user = User.find_by(email: auth_params[:email])
     if user&.valid_password?(auth_params[:password])
       token = JsonWebToken.encode(user_id: user.id)
-      response.set_header('Authorization', "Bearer #{token}")
       render json: {
-        user: { id: user.id, email: user.email, role: user.role }
+        token: token,
+        user: { id: user.id, email: user.email, role: user.role, organization_id: user.organization_id }
       }, status: :ok
     else
       render json: { errors: ['Invalid email or password'] }, status: :unauthorized
@@ -29,10 +29,10 @@ class AuthenticateController < ApplicationController
   private
 
   def auth_params
-    params.require(:user).permit(:email, :password)
+    params.expect(user: [:email, :password])
   end
 
   def register_params
-    params.require(:user).permit(:email, :password, :password_confirmation, :role)
+    params.expect(user: [:email, :password, :password_confirmation, :role])
   end
 end

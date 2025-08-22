@@ -384,6 +384,7 @@ DEPENDENCIES
   rack-cors
   rails (~> 8.0.2)
   rubocop
+  rubocop-performance
   rubocop-rails
   rubocop-rails-omakase
   solid_cable

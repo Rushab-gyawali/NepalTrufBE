@@ -46,6 +46,7 @@ class SportsFieldsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def sports_field_params
-      params.expect(sports_field: [ :name, :owner_id, :field_type, :address, :latitude, :longitude, :hourly_rate, :description, :image_url, :is_active ])
+      params.expect(sports_field: [ :name, :owner_id, :field_type, :address, :latitude, :longitude, :hourly_rate,
+                                    :description, :image_url, :is_active ])
     end
 end

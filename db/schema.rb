@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_08_11_082845) do
+ActiveRecord::Schema[8.0].define(version: 2025_08_21_071912) do
   create_table "bookings", force: :cascade do |t|
     t.string "user_id"
     t.string "sports_field_id"
@@ -19,6 +19,16 @@ ActiveRecord::Schema[8.0].define(version: 2025_08_11_082845) do
     t.string "status"
     t.decimal "total_price"
     t.string "payment_status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "organization_id"
+  end
+
+  create_table "organizations", force: :cascade do |t|
+    t.string "organization_name"
+    t.string "slug"
+    t.string "organization_registered_date"
+    t.boolean "is_active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -36,7 +46,6 @@ ActiveRecord::Schema[8.0].define(version: 2025_08_11_082845) do
 
   create_table "sports_fields", force: :cascade do |t|
     t.string "name"
-    t.string "owner_id"
     t.string "field_type"
     t.string "address"
     t.decimal "latitude"
@@ -47,6 +56,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_08_11_082845) do
     t.boolean "is_active"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "organization_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -61,6 +71,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_08_11_082845) do
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
+    t.string "organization_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 end

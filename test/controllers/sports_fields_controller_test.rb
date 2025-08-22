@@ -12,7 +12,8 @@ class SportsFieldsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create sports_field" do
     assert_difference("SportsField.count") do
-      post sports_fields_url, params: { sports_field: { address: @sports_field.address, description: @sports_field.description, field_type: @sports_field.field_type, hourly_rate: @sports_field.hourly_rate, image_url: @sports_field.image_url, is_active: @sports_field.is_active, latitude: @sports_field.latitude, longitude: @sports_field.longitude, name: @sports_field.name, owner_id: @sports_field.owner_id } }, as: :json
+      post sports_fields_url,
+           params: { sports_field: { address: @sports_field.address, description: @sports_field.description, field_type: @sports_field.field_type, hourly_rate: @sports_field.hourly_rate, image_url: @sports_field.image_url, is_active: @sports_field.is_active, latitude: @sports_field.latitude, longitude: @sports_field.longitude, name: @sports_field.name, owner_id: @sports_field.owner_id } }, as: :json
     end
 
     assert_response :created
@@ -24,7 +25,8 @@ class SportsFieldsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update sports_field" do
-    patch sports_field_url(@sports_field), params: { sports_field: { address: @sports_field.address, description: @sports_field.description, field_type: @sports_field.field_type, hourly_rate: @sports_field.hourly_rate, image_url: @sports_field.image_url, is_active: @sports_field.is_active, latitude: @sports_field.latitude, longitude: @sports_field.longitude, name: @sports_field.name, owner_id: @sports_field.owner_id } }, as: :json
+    patch sports_field_url(@sports_field),
+          params: { sports_field: { address: @sports_field.address, description: @sports_field.description, field_type: @sports_field.field_type, hourly_rate: @sports_field.hourly_rate, image_url: @sports_field.image_url, is_active: @sports_field.is_active, latitude: @sports_field.latitude, longitude: @sports_field.longitude, name: @sports_field.name, owner_id: @sports_field.owner_id } }, as: :json
     assert_response :success
   end
 

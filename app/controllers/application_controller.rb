@@ -12,14 +12,13 @@ class ApplicationController < ActionController::API
 
   def authenticate_user!
     auth_header = request.headers['Authorization']
-    token = auth_header&.split(' ')&.last
+    token = auth_header&.split&.last
     return head(:unauthorized) unless token
 
     begin
       decoded = JsonWebToken.decode(token)
       return head(:unauthorized) unless decoded && decoded[:user_id]
-      debugger
-      @current_user = User.find_by(id: decoded["user_id"])
+      @current_user = User.find_by(id: decoded[:user_id])
       return head(:unauthorized) unless @current_user
 
     rescue JWT::DecodeError, JWT::ExpiredSignature => e
@@ -33,8 +32,7 @@ class ApplicationController < ActionController::API
   
   def set_tenant
     return unless @current_user
-
-    sports_field = SportsField.find_by(owner_id: @current_user.id)
-    set_current_tenant(sports_field) if sports_field.present?
+    current_tenant = Organization.find_by(id: @current_user.organization_id)
+    set_current_tenant(current_tenant) if current_tenant.present?
   end
 end

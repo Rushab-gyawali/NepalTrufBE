@@ -1,7 +1,8 @@
 class Booking < ApplicationRecord
     acts_as_tenant :sports_field
-    belongs_to :user, foreign_key: :user_id
-    belongs_to :sports_field,foreign_key: :sports_field_id
+    belongs_to :user
+    belongs_to :sports_field
+    belongs_to :organization
 
     before_save :is_field_available
     before_save :calculate_total_price
@@ -20,14 +21,13 @@ class Booking < ApplicationRecord
           booked_times = Booking.where(sports_field_id: sports_field.id)
                                 .where("start_time < ? AND end_time > ?", end_time, start_time)
       
-          if booked_times.exists?
-            logger.info "Checking availability for sports field #{sports_field.id} from #{start_time} to #{end_time}. Overlapping found."
-      
+          if booked_times.exists?      
             time_slots = booked_times.map do |booking|
               "#{booking.start_time.strftime("%Y-%m-%d %H:%M")} to #{booking.end_time.strftime("%Y-%m-%d %H:%M")}"
             end.join(", ")
       
-            errors.add(:base, "The sports field is already booked during: #{time_slots}. Please choose a different time slot.")
+            errors.add(:base, 
+                       "The sports field is already booked during: #{time_slots}. Please choose a different time slot.")
             throw :abort
         end
         else

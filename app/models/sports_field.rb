@@ -1,5 +1,4 @@
 class SportsField < ApplicationRecord
-    belongs_to :user, foreign_key: :owner_id
-    validates :owner_id, presence: true, uniqueness: true
-    has_many :bookings
+    belongs_to :organization
+    has_many :bookings, dependent: :destroy
 end

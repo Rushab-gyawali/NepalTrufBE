@@ -1,3 +1,3 @@
 class Payment < ApplicationRecord
-    belongs_to :booking, foreign_key: :booking_id
+    belongs_to :booking
 end

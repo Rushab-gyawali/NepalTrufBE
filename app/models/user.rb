@@ -6,10 +6,9 @@ class User < ApplicationRecord
          :validatable,
          :jwt_authenticatable,
          jwt_revocation_strategy: Devise::JWT::RevocationStrategies::Null
-
+  belongs_to :organization
   has_many :sports_fields, dependent: :destroy
-  has_many :bookings
-
+  has_many :bookings, dependent: :destroy
 
   def is_admin?
     role == 'admin'
@@ -19,12 +18,12 @@ class User < ApplicationRecord
     role == 'user'
   end
 
-  def is_test?
-    role == "testt"
+  def is_staff?
+    role == "staff"
   end
 
   def can_view_booking?
-    is_admin?
+    is_admin? || is_staff?
   end
   
 end
